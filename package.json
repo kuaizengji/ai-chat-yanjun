@@ -1,0 +1,16 @@
+{
+  "name": "ai-chat-yanjun",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project-local Firecrawl CLI for web search and scraping.",
+  "scripts": {
+    "firecrawl": "firecrawl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuaizengji/ai-chat-yanjun.git"
+  },
+  "dependencies": {
+    "firecrawl-cli": "^1.24.4"
+  }
+}
