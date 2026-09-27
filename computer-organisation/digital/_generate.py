@@ -377,7 +377,38 @@ def write_successor4():
     (OUT / "Successor4.dig").write_text(text, encoding="utf-8")
 
 
+def half_adder_block(ox, oy, tag):
+    """XOR+AND half adder. XOR sits at (ox, oy).
+
+    Pins (same geometry as the tested HalfAdder.dig):
+      A -> (ox, oy) and (ox, oy+80)
+      B -> (ox, oy+40) and (ox, oy+120)
+      S = (ox+60, oy+20)
+      C = (ox+60, oy+100)
+    """
+    gates = [
+        ve("XOr", ox, oy),
+        ve("And", ox, oy + 80),
+        ve(
+            "Rectangle",
+            ox - 20,
+            oy - 40,
+            font_size(14),
+            rect_h(1),
+            rect_w(8),
+            label(tag),
+        ),
+    ]
+    return gates
+
+
 def write_negation3():
+    # One file, gate level. No HalfAdder.dig / Successor4.dig dependency.
+    # Stage 1: zero-extend X to 4 bits and invert.
+    # Stage 2: full 4-bit successor inlined (LSB NOT, then three XOR/AND half adders).
+    #
+    # Not: input at pos, output at (x+40, y).
+    # XOR/AND: see half_adder_block.
     shape = custom_shape(
         pins=[
             ("X_0", 0, 0),
@@ -414,39 +445,71 @@ def write_negation3():
 {shape}
     </entry>
 """
+    # Half adders for bits 1..3. XOR origin (ox, oy).
+    ha = [(560, 280), (560, 560), (560, 840)]
     visual = [
         ve(
             "Rectangle",
-            80,
-            40,
-            font_size(20),
-            rect_h(3),
-            rect_w(32),
-            label("Exercise 2  3-bit negation to 4-bit two's complement  -X = ~X + 1"),
+            60,
+            20,
+            font_size(18),
+            rect_h(2),
+            rect_w(36),
+            label("Exercise 2  3-bit negation, all gates in this one file   -X = ~X + 1"),
         ),
-        ve("In", 140, 160, label("X_0"), desc("LSB of the unsigned 3-bit input"), default_int(1)),
-        ve("In", 140, 200, label("X_1"), desc("Input bit 1")),
-        ve("In", 140, 240, label("X_2"), desc("MSB of the unsigned 3-bit input")),
-        ve("Not", 240, 160),
-        ve("Not", 240, 200),
-        ve("Not", 240, 240),
+        ve(
+            "Rectangle",
+            60,
+            80,
+            font_size(14),
+            rect_h(2),
+            rect_w(14),
+            label("1. zero-extend to 4 bits, then invert"),
+        ),
+        ve("In", 80, 160, label("X_0"), desc("LSB of the unsigned 3-bit input"), default_int(1)),
+        ve("In", 80, 280, label("X_1"), desc("Input bit 1")),
+        ve("In", 80, 560, label("X_2"), desc("MSB of the unsigned 3-bit input")),
         ve(
             "Const",
-            140,
-            280,
+            80,
+            840,
             ("Value", "<long>0</long>"),
-            desc("Zero-extend the 3-bit input to 4 bits (high bit = 0)"),
+            desc("Zero-extend: the new high bit is constant 0, then inverted to 1"),
         ),
-        ve("Not", 240, 280),
-        ve("Successor4.dig", 400, 160),
-        ve("Out", 620, 160, label("Y_0"), desc("LSB of -X in 4-bit two's complement")),
-        ve("Out", 620, 200, label("Y_1")),
-        ve("Out", 620, 240, label("Y_2")),
-        ve("Out", 620, 280, label("Y_3"), desc("Sign bit of -X")),
+        ve("Not", 200, 160),
+        ve("Not", 200, 280),
+        ve("Not", 200, 560),
+        ve("Not", 200, 840),
+        ve(
+            "Rectangle",
+            380,
+            80,
+            font_size(14),
+            rect_h(2),
+            rect_w(18),
+            label("2. inlined 4-bit successor (+1)"),
+        ),
+        ve(
+            "Rectangle",
+            360,
+            120,
+            font_size(14),
+            rect_h(1),
+            rect_w(12),
+            label("bit0: S0 = NOT B0, C0 = B0"),
+        ),
+        ve("Not", 400, 160),
+        *half_adder_block(ha[0][0], ha[0][1], "bit1 half adder  S=A xor C, C=A and C"),
+        *half_adder_block(ha[1][0], ha[1][1], "bit2 half adder"),
+        *half_adder_block(ha[2][0], ha[2][1], "bit3 half adder"),
+        ve("Out", 1040, 160, label("Y_0"), desc("LSB of -X in 4-bit two's complement")),
+        ve("Out", 1040, 300, label("Y_1")),
+        ve("Out", 1040, 580, label("Y_2")),
+        ve("Out", 1040, 860, label("Y_3"), desc("Sign bit of -X")),
         ve(
             "Testcase",
-            140,
-            400,
+            80,
+            1040,
             label("all-8-inputs"),
             (
                 "Testdata",
@@ -460,44 +523,74 @@ def write_negation3():
                 ),
             ),
         ),
-        ve(
-            "Rectangle",
-            200,
-            100,
-            font_size(16),
-            rect_h(2),
-            rect_w(12),
-            label("invert 4-bit zero-extend"),
-        ),
-        ve(
-            "Rectangle",
-            400,
-            340,
-            font_size(16),
-            rect_h(2),
-            rect_w(18),
-            label("then +1  (Exercise 1 successor)"),
-        ),
     ]
+
+    def ha_wires(ox, oy, ax, ay, cin_x, cin_entry_y):
+        """Connect inverted bit (ax, ay) and carry-in rail to one half adder.
+
+        Carry-in arrives on a vertical rail at x=cin_x, then turns right at the B pins.
+        Data bit stays on its own y and never shares a vertex with that rail.
+        """
+        fan = ox - 60
+        return [
+            # A fanout: XOR in (ox, oy), AND in (ox, oy+80)
+            wire(ax, ay, fan, ay),
+            wire(fan, ay, ox, oy),
+            wire(fan, ay, fan, oy + 80),
+            wire(fan, oy + 80, ox, oy + 80),
+            # B / carry-in: XOR in (ox, oy+40), AND in (ox, oy+120)
+            wire(cin_x, cin_entry_y, cin_x, oy + 40),
+            wire(cin_x, oy + 40, ox, oy + 40),
+            wire(cin_x, oy + 40, cin_x, oy + 120),
+            wire(cin_x, oy + 120, ox, oy + 120),
+        ]
+
     wires = [
-        wire(140, 160, 240, 160),
-        wire(140, 200, 240, 200),
-        wire(140, 240, 240, 240),
-        wire(140, 280, 240, 280),
-        # Not outputs are +40 in x for default IEEE Not
-        wire(280, 160, 400, 160),
-        wire(280, 200, 400, 200),
-        wire(280, 240, 400, 240),
-        wire(280, 280, 400, 280),
-        # Successor4 custom shape: outs at x+100
-        wire(500, 160, 620, 160),
-        wire(500, 200, 620, 200),
-        wire(500, 240, 620, 240),
-        wire(500, 280, 620, 280),
+        # Invert the zero-extended input. Not output is x+40.
+        wire(80, 160, 200, 160),
+        wire(80, 280, 200, 280),
+        wire(80, 560, 200, 560),
+        wire(80, 840, 200, 840),
+        # B0 = ~X0 into the bit0 NOT; S0 = ~B0 = Y0.
+        wire(240, 160, 400, 160),
+        wire(440, 160, 1040, 160),
+        # C0 = B0 travels above the inputs, then down the far-left rail.
+        wire(240, 160, 240, 40),
+        wire(240, 40, 40, 40),
+        wire(40, 40, 40, 320),
     ]
+    # bit1 A is ~X1 at (240, 280); carry rail x=40 enters at y=320 (XOR B pin).
+    wires += ha_wires(560, 280, 240, 280, 40, 320)
+    # C1 leaves AND at (620, 380), ducks into the gap, returns on the left rail.
+    wires += [
+        wire(620, 380, 700, 380),
+        wire(700, 380, 700, 480),
+        wire(700, 480, 40, 480),
+        wire(40, 480, 40, 600),
+    ]
+    wires += ha_wires(560, 560, 240, 560, 40, 600)
+    # Sums to the right. y = oy+20, so they sit between the A and B rows.
+    wires += [
+        wire(620, 300, 1040, 300),
+        wire(620, 580, 1040, 580),
+    ]
+    # C2 leaves AND at (620, 660).
+    wires += [
+        wire(620, 660, 760, 660),
+        wire(760, 660, 760, 760),
+        wire(760, 760, 40, 760),
+        wire(40, 760, 40, 880),
+    ]
+    wires += ha_wires(560, 840, 240, 840, 40, 880)
+    wires += [
+        wire(620, 860, 1040, 860),
+        # C3 (620, 940) is the successor carry-out. For X=0 it is 1 and the
+        # low 4 bits are 0000, so this pin is intentionally left open.
+    ]
+
     text = circuit(
-        "3-bit unsigned to 4-bit two's complement negation: -X = ~X + 1.\n"
-        "先把 3 位零扩展到 4 位，按位取反，再用习题 1 的 4 位后继器加 1。",
+        "Exercise 2 in a single file: 3-bit unsigned to 4-bit two's complement.\n"
+        "-X = ~X + 1. Zero-extend, invert, then the full 4-bit successor (NOT + three half adders) is drawn with gates in this same circuit. No other .dig file is required.",
         visual,
         wires,
         extra,
