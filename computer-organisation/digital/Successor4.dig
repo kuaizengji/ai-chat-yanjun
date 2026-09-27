@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes>
+    <entry>
+      <string>Description</string>
+      <string>Full 4-bit successor (incrementer) S = A + 1, with carry-out.
+完整 4 位后继器：最低位取反，高位用半加器级联进位；1111+1=10000。</string>
+    </entry>
+    <entry>
+      <string>shapeType</string>
+      <shapeType>CUSTOM</shapeType>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>5</int>
+    </entry>
+    <entry>
+      <string>customShape</string>
+        <shape>
+        <pins>
+          <entry>
+            <string>A_0</string>
+            <pin>
+              <pos x="0" y="0"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>A_1</string>
+            <pin>
+              <pos x="0" y="40"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>A_2</string>
+            <pin>
+              <pos x="0" y="80"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>A_3</string>
+            <pin>
+              <pos x="0" y="120"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>S_0</string>
+            <pin>
+              <pos x="100" y="0"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>S_1</string>
+            <pin>
+              <pos x="100" y="40"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>S_2</string>
+            <pin>
+              <pos x="100" y="80"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>S_3</string>
+            <pin>
+              <pos x="100" y="120"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>C_out</string>
+            <pin>
+              <pos x="100" y="160"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+        </pins>
+        <drawables>
+          <poly>
+            <poly path="M 0,0 L 100,0 L 100,180 L 0,180 Z" evenOdd="false"/>
+            <thickness>3</thickness>
+            <filled>false</filled>
+            <color>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </color>
+          </poly>
+          <text>
+            <p1 x="50" y="96"/>
+            <p2 x="51" y="96"/>
+            <text>+1</text>
+            <orientation>CENTERBOTTOM</orientation>
+            <size>16</size>
+            <color>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="8" y="14"/>
+            <p2 x="9" y="14"/>
+            <text>A0</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="8" y="54"/>
+            <p2 x="9" y="54"/>
+            <text>A1</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="8" y="94"/>
+            <p2 x="9" y="94"/>
+            <text>A2</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="8" y="134"/>
+            <p2 x="9" y="134"/>
+            <text>A3</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="14"/>
+            <p2 x="93" y="14"/>
+            <text>S0</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="54"/>
+            <p2 x="93" y="54"/>
+            <text>S1</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="94"/>
+            <p2 x="93" y="94"/>
+            <text>S2</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="134"/>
+            <p2 x="93" y="134"/>
+            <text>S3</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="174"/>
+            <p2 x="93" y="174"/>
+            <text>Cout</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+        </drawables>
+      </shape>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>20</int>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>3</int>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>28</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Exercise 1  Full 4-bit successor  S = A + 1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>A_0</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>LSB of the 4-bit input</string>
+        </entry>
+        <entry>
+          <string>Default</string>
+          <int>1</int>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="300" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>S_0</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>LSB of A+1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="720" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>A_1</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Input bit 1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>A_2</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Input bit 2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="480"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>A_3</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>MSB of the 4-bit input</string>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="640"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>S_1</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Bit 1 of A+1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="720" y="340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>S_2</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Bit 2 of A+1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="720" y="500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>S_3</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Bit 3 of A+1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="720" y="660"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>C_out</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Carry-out: 1111+1 becomes 10000</string>
+        </entry>
+      </elementAttributes>
+      <pos x="720" y="760"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>2</int>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>LSB: S0 = NOT A0,  C0 = A0  (HA with +1)</string>
+        </entry>
+      </elementAttributes>
+      <pos x="280" y="140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>HalfAdder.dig</elementName>
+      <elementAttributes/>
+      <pos x="360" y="300"/>
+    </visualElement>
+    <visualElement>
+      <elementName>HalfAdder.dig</elementName>
+      <elementAttributes/>
+      <pos x="360" y="460"/>
+    </visualElement>
+    <visualElement>
+      <elementName>HalfAdder.dig</elementName>
+      <elementAttributes/>
+      <pos x="360" y="620"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>all-16-inputs</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString># All 16 inputs. Full successor includes C_out so 15+1 = 10000.
+A_3 A_2 A_1 A_0 C_out S_3 S_2 S_1 S_0
+loop(n,16)
+bits(4,n) bits(5,n+1)
+end loop
+</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="120" y="820"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="120" y="200"/>
+      <p2 x="180" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="200"/>
+      <p2 x="300" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="200"/>
+      <p2 x="720" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="200"/>
+      <p2 x="180" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="340"/>
+      <p2 x="360" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="320"/>
+      <p2 x="200" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="320"/>
+      <p2 x="200" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="300"/>
+      <p2 x="360" y="300"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="300"/>
+      <p2 x="720" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="340"/>
+      <p2 x="500" y="340"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="340"/>
+      <p2 x="500" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="500"/>
+      <p2 x="360" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="480"/>
+      <p2 x="200" y="480"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="480"/>
+      <p2 x="200" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="460"/>
+      <p2 x="360" y="460"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="460"/>
+      <p2 x="720" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="500"/>
+      <p2 x="520" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="500"/>
+      <p2 x="520" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="660"/>
+      <p2 x="360" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="120" y="640"/>
+      <p2 x="200" y="640"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="640"/>
+      <p2 x="200" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="620"/>
+      <p2 x="360" y="620"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="620"/>
+      <p2 x="720" y="660"/>
+    </wire>
+    <wire>
+      <p1 x="440" y="660"/>
+      <p2 x="720" y="760"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>

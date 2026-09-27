@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>1</version>
+  <attributes>
+    <entry>
+      <string>Description</string>
+      <string>3-bit unsigned to 4-bit two's complement negation: -X = ~X + 1.
+先把 3 位零扩展到 4 位，按位取反，再用习题 1 的 4 位后继器加 1。</string>
+    </entry>
+    <entry>
+      <string>shapeType</string>
+      <shapeType>CUSTOM</shapeType>
+    </entry>
+    <entry>
+      <string>Width</string>
+      <int>5</int>
+    </entry>
+    <entry>
+      <string>customShape</string>
+        <shape>
+        <pins>
+          <entry>
+            <string>X_0</string>
+            <pin>
+              <pos x="0" y="0"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>X_1</string>
+            <pin>
+              <pos x="0" y="40"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>X_2</string>
+            <pin>
+              <pos x="0" y="80"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Y_0</string>
+            <pin>
+              <pos x="100" y="0"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Y_1</string>
+            <pin>
+              <pos x="100" y="40"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Y_2</string>
+            <pin>
+              <pos x="100" y="80"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+          <entry>
+            <string>Y_3</string>
+            <pin>
+              <pos x="100" y="120"/>
+              <showLabel>true</showLabel>
+            </pin>
+          </entry>
+        </pins>
+        <drawables>
+          <poly>
+            <poly path="M 0,0 L 100,0 L 100,140 L 0,140 Z" evenOdd="false"/>
+            <thickness>3</thickness>
+            <filled>false</filled>
+            <color>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </color>
+          </poly>
+          <text>
+            <p1 x="50" y="76"/>
+            <p2 x="51" y="76"/>
+            <text>-X</text>
+            <orientation>CENTERBOTTOM</orientation>
+            <size>16</size>
+            <color>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="8" y="14"/>
+            <p2 x="9" y="14"/>
+            <text>X0</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="8" y="54"/>
+            <p2 x="9" y="54"/>
+            <text>X1</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="8" y="94"/>
+            <p2 x="9" y="94"/>
+            <text>X2</text>
+            <orientation>LEFTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="14"/>
+            <p2 x="93" y="14"/>
+            <text>Y0</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="54"/>
+            <p2 x="93" y="54"/>
+            <text>Y1</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="94"/>
+            <p2 x="93" y="94"/>
+            <text>Y2</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+          <text>
+            <p1 x="92" y="134"/>
+            <p2 x="93" y="134"/>
+            <text>Y3</text>
+            <orientation>RIGHTBOTTOM</orientation>
+            <size>14</size>
+            <color>
+              <red>80</red>
+              <green>80</green>
+              <blue>80</blue>
+              <alpha>255</alpha>
+            </color>
+          </text>
+        </drawables>
+      </shape>
+    </entry>
+  </attributes>
+  <visualElements>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>20</int>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>3</int>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>32</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>Exercise 2  3-bit negation to 4-bit two's complement  -X = ~X + 1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="40"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>X_0</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>LSB of the unsigned 3-bit input</string>
+        </entry>
+        <entry>
+          <string>Default</string>
+          <int>1</int>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>X_1</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Input bit 1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>X_2</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>MSB of the unsigned 3-bit input</string>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="240" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="240" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="240" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Zero-extend the 3-bit input to 4 bits (high bit = 0)</string>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Not</elementName>
+      <elementAttributes/>
+      <pos x="240" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Successor4.dig</elementName>
+      <elementAttributes/>
+      <pos x="400" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Y_0</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>LSB of -X in 4-bit two's complement</string>
+        </entry>
+      </elementAttributes>
+      <pos x="620" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Y_1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="620" y="200"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Y_2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="620" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>Y_3</string>
+        </entry>
+        <entry>
+          <string>Description</string>
+          <string>Sign bit of -X</string>
+        </entry>
+      </elementAttributes>
+      <pos x="620" y="280"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Testcase</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>all-8-inputs</string>
+        </entry>
+        <entry>
+          <string>Testdata</string>
+          <testData>
+            <dataString># All 8 inputs. Y is the 4-bit two's complement of -X.
+# 001 -&gt; 1111 (-1); 010 -&gt; 1110 (-2); 000 -&gt; 0000; 111 -&gt; 1001 (-7).
+X_2 X_1 X_0 Y_3 Y_2 Y_1 Y_0
+loop(n,8)
+bits(3,n) bits(4,16-n)
+end loop
+</dataString>
+          </testData>
+        </entry>
+      </elementAttributes>
+      <pos x="140" y="400"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>2</int>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>12</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>invert 4-bit zero-extend</string>
+        </entry>
+      </elementAttributes>
+      <pos x="200" y="100"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Rectangle</elementName>
+      <elementAttributes>
+        <entry>
+          <string>textFontSize</string>
+          <int>16</int>
+        </entry>
+        <entry>
+          <string>RectHeight</string>
+          <int>2</int>
+        </entry>
+        <entry>
+          <string>RectWidth</string>
+          <int>18</int>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>then +1  (Exercise 1 successor)</string>
+        </entry>
+      </elementAttributes>
+      <pos x="400" y="340"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="140" y="160"/>
+      <p2 x="240" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="200"/>
+      <p2 x="240" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="240"/>
+      <p2 x="240" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="140" y="280"/>
+      <p2 x="240" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="160"/>
+      <p2 x="400" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="200"/>
+      <p2 x="400" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="240"/>
+      <p2 x="400" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="280" y="280"/>
+      <p2 x="400" y="280"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="160"/>
+      <p2 x="620" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="200"/>
+      <p2 x="620" y="200"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="240"/>
+      <p2 x="620" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="280"/>
+      <p2 x="620" y="280"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
