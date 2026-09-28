@@ -101,6 +101,183 @@ public class Stack {
         }
     }
 
+    private boolean isSpace(char c) {
+        return c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f';
+    }
+
+    private boolean isOperatorChar(char c) {
+        return c == '+' || c == '-' || c == '*' || c == '/' || c == '^' || c == '%'
+                || c == '$' || c == 'x' || c == 'X' || c == '\u00d7' || c == '\u00f7';
+    }
+
+    private boolean isOperatorToken(String token) {
+        return token != null && token.length() == 1 && isOperatorChar(token.charAt(0));
+    }
+
+    private boolean isNumberToken(String token) {
+        if (token == null || token.isEmpty()) {
+            return false;
+        }
+        int i = 0;
+        if (token.charAt(0) == '+' || token.charAt(0) == '-') {
+            if (token.length() == 1) {
+                return false;
+            }
+            i++;
+        }
+        boolean digit = false;
+        boolean dot = false;
+        for (; i < token.length(); i++) {
+            char c = token.charAt(i);
+            if (c >= '0' && c <= '9') {
+                digit = true;
+            } else if (c == '.' && !dot) {
+                dot = true;
+            } else {
+                return false;
+            }
+        }
+        return digit;
+    }
+
+    private boolean fitsInInt(String token) {
+        if (token.indexOf('.') >= 0) {
+            return true;
+        }
+        try {
+            long value = Long.parseLong(token);
+            return value >= Integer.MIN_VALUE && value <= Integer.MAX_VALUE;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+    private boolean containsDecimal(String[] tokens) {
+        if (tokens == null) {
+            return false;
+        }
+        for (int i = 0; i < tokens.length; i++) {
+            if (tokens[i] != null && tokens[i].indexOf('.') >= 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean containsMultiDigit(String[] tokens) {
+        if (tokens == null) {
+            return false;
+        }
+        for (int i = 0; i < tokens.length; i++) {
+            if (!isNumberToken(tokens[i])) {
+                continue;
+            }
+            int digits = 0;
+            String token = tokens[i];
+            for (int j = 0; j < token.length(); j++) {
+                if (token.charAt(j) >= '0' && token.charAt(j) <= '9') {
+                    digits++;
+                }
+            }
+            if (digits >= 2) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isStructurallyValid(String[] tokens) {
+        if (tokens == null || tokens.length == 0) {
+            return false;
+        }
+        int depth = 0;
+        for (int i = 0; i < tokens.length; i++) {
+            String token = tokens[i];
+            if (isNumberToken(token)) {
+                if (!fitsInInt(token)) {
+                    return false;
+                }
+                depth++;
+            } else if (isOperatorToken(token)) {
+                if (depth < 2) {
+                    return false;
+                }
+                depth--;
+            } else {
+                return false;
+            }
+        }
+        return depth == 1;
+    }
+
+    private String[] scanTokens(String s) {
+        String[] buf = new String[s.length()];
+        int n = 0;
+        int i = 0;
+        while (i < s.length()) {
+            char c = s.charAt(i);
+            if (isSpace(c)) {
+                i++;
+                continue;
+            }
+            boolean nextIsNumber = i + 1 < s.length()
+                    && (Character.isDigit(s.charAt(i + 1)) || s.charAt(i + 1) == '.');
+            boolean sign = (c == '+' || c == '-') && nextIsNumber
+                    && (i == 0 || isSpace(s.charAt(i - 1)) || isOperatorChar(s.charAt(i - 1)));
+            if (Character.isDigit(c) || c == '.' || sign) {
+                int start = i;
+                if (sign) {
+                    i++;
+                }
+                boolean digit = false;
+                boolean dot = false;
+                while (i < s.length()) {
+                    char d = s.charAt(i);
+                    if (Character.isDigit(d)) {
+                        digit = true;
+                        i++;
+                    } else if (d == '.' && !dot) {
+                        dot = true;
+                        i++;
+                    } else {
+                        break;
+                    }
+                }
+                if (!digit) {
+                    buf[n++] = String.valueOf(c);
+                    i = start + 1;
+                    continue;
+                }
+                buf[n++] = s.substring(start, i);
+            } else if (isOperatorChar(c)) {
+                buf[n++] = String.valueOf(c);
+                i++;
+            } else {
+                buf[n++] = String.valueOf(c);
+                i++;
+            }
+        }
+        String[] tokens = new String[n];
+        for (int k = 0; k < n; k++) {
+            tokens[k] = buf[k];
+        }
+        return tokens;
+    }
+
+    private String[] singleDigitTokens(String s) {
+        StringBuilder compact = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            if (!isSpace(s.charAt(i))) {
+                compact.append(s.charAt(i));
+            }
+        }
+        String[] tokens = new String[compact.length()];
+        for (int i = 0; i < compact.length(); i++) {
+            tokens[i] = String.valueOf(compact.charAt(i));
+        }
+        return tokens;
+    }
+
     /**
      * Tokenizes a postfix expression into individual numbers and operators.
      * Handles both space-separated formats (e.g., "5 3 +") and continuous 
@@ -114,26 +291,54 @@ public class Stack {
             return new String[0];
         }
         String trimmed = postfix.trim();
+        if (trimmed.length() >= 2
+                && ((trimmed.charAt(0) == '"' && trimmed.charAt(trimmed.length() - 1) == '"')
+                || (trimmed.charAt(0) == '\'' && trimmed.charAt(trimmed.length() - 1) == '\''))) {
+            trimmed = trimmed.substring(1, trimmed.length() - 1).trim();
+        }
         if (trimmed.isEmpty()) {
             return new String[0];
         }
-        if (trimmed.matches("-?\\d+")) {
-            return new String[] { trimmed };
-        }
-        
-        // Check if the expression contains whitespace (indicates separate tokens).
-        if (trimmed.matches(".*\\s+.*")) {
-            // Split by whitespace; this also captures negative numbers like "-3".
-            return trimmed.split("\\s+");
-        } else {
-            // No whitespace: treat each character as a separate token.
-            // This handles the common single-digit continuous format.
-            String[] tokens = new String[trimmed.length()];
-            for (int i = 0; i < trimmed.length(); i++) {
-                tokens[i] = String.valueOf(trimmed.charAt(i));
+        String normalized = trimmed.replace(',', ' ').replace(';', ' ');
+        int end = normalized.length();
+        while (end > 0) {
+            char tail = normalized.charAt(end - 1);
+            if (isSpace(tail) || tail == '=' || tail == '#' || tail == '\uFF1D') {
+                end--;
+            } else {
+                break;
             }
-            return tokens;
         }
+        normalized = normalized.substring(0, end).trim();
+        if (normalized.isEmpty()) {
+            return new String[0];
+        }
+        if (isNumberToken(normalized) && normalized.indexOf(' ') < 0
+                && normalized.indexOf('\t') < 0) {
+            return new String[] { normalized };
+        }
+
+        // Check if the expression contains whitespace (indicates separate tokens).
+        // Split by whitespace; this also captures negative numbers like "-3".
+        // No whitespace: treat each character as a separate token.
+        // This handles the common single-digit continuous format.
+        String[] greedy = scanTokens(normalized);
+        boolean spaced = false;
+        for (int i = 0; i < normalized.length(); i++) {
+            if (isSpace(normalized.charAt(i))) {
+                spaced = true;
+                break;
+            }
+        }
+        if (isStructurallyValid(greedy)
+                && (spaced || containsMultiDigit(greedy) || containsDecimal(greedy))) {
+            return greedy;
+        }
+        String[] single = singleDigitTokens(normalized);
+        if (isStructurallyValid(single)) {
+            return single;
+        }
+        return greedy;
     }
 
     /**
@@ -154,31 +359,119 @@ public class Stack {
         }
         
         // Use a local standard library stack for validation to keep the instance stack clean.
-        java.util.Stack<Integer> tempStack = new java.util.Stack<>();
+        int depth = 0;
         
-        for (String token : tokens) {
-            if (token.matches("-?\\d+")) {
-                // If the token is a number (including negative), push it onto the stack.
-                try {
-                    tempStack.push(Integer.parseInt(token));
-                } catch (NumberFormatException e) {
-                    return 0;
+        try {
+            for (String token : tokens) {
+                if (isNumberToken(token)) {
+                    // If the token is a number (including negative), push it onto the stack.
+                    if (!fitsInInt(token)) {
+                        return 0;
+                    }
+                    depth++;
+                } else if (isOperatorToken(token)) {
+                    // If the token is an operator, ensure there are at least two operands.
+                    if (depth < 2) {
+                        return 0; // Invalid: not enough operands for the operator
+                    }
+                    depth--; // Push a placeholder result
+                } else {
+                    return 0; // Invalid character encountered
                 }
-            } else if (token.matches("[+\\-*/]")) {
-                // If the token is an operator, ensure there are at least two operands.
-                if (tempStack.size() < 2) {
-                    return 0; // Invalid: not enough operands for the operator
-                }
-                tempStack.pop();
-                tempStack.pop();
-                tempStack.push(0); // Push a placeholder result
-            } else {
-                return 0; // Invalid character encountered
             }
+        } catch (RuntimeException e) {
+            return 0;
         }
         
         // A valid postfix expression should result in exactly one value on the stack.
-        return (tempStack.size() == 1) ? 1 : 0;
+        return (depth == 1) ? 1 : 0;
+    }
+
+    private Integer evalInt(String[] tokens) {
+        int[] stack = new int[tokens.length];
+        int topIndex = -1;
+        for (int i = 0; i < tokens.length; i++) {
+            String token = tokens[i];
+            if (isNumberToken(token)) {
+                stack[++topIndex] = Integer.parseInt(token);
+            } else {
+                int operand2 = stack[topIndex--]; // The second operand is popped first
+                int operand1 = stack[topIndex--]; // The first operand is popped second
+                int result = 0;
+                // Perform the corresponding arithmetic operation.
+                char op = token.charAt(0);
+                if (op == '+') {
+                    result = operand1 + operand2;
+                } else if (op == '-') {
+                    result = operand1 - operand2;
+                } else if (op == '*' || op == 'x' || op == 'X' || op == '\u00d7') {
+                    result = operand1 * operand2;
+                } else if (op == '/' || op == '\u00f7') {
+                    if (operand2 == 0) {
+                        return null; // Prevent division by zero
+                    }
+                    result = operand1 / operand2;
+                } else if (op == '%') {
+                    if (operand2 == 0) {
+                        return null; // Prevent division by zero
+                    }
+                    result = operand1 % operand2;
+                } else if (op == '^' || op == '$') {
+                    if (operand2 < 0) {
+                        return null;
+                    }
+                    result = 1;
+                    for (int p = 0; p < operand2; p++) {
+                        result *= operand1;
+                    }
+                }
+                stack[++topIndex] = result;
+            }
+        }
+        return stack[topIndex]; // The final result is the only element left
+    }
+
+    private Double evalDouble(String[] tokens) {
+        double[] stack = new double[tokens.length];
+        int topIndex = -1;
+        for (int i = 0; i < tokens.length; i++) {
+            String token = tokens[i];
+            if (isNumberToken(token)) {
+                stack[++topIndex] = Double.parseDouble(token);
+            } else {
+                double operand2 = stack[topIndex--];
+                double operand1 = stack[topIndex--];
+                double result = 0;
+                char op = token.charAt(0);
+                if (op == '+') {
+                    result = operand1 + operand2;
+                } else if (op == '-') {
+                    result = operand1 - operand2;
+                } else if (op == '*' || op == 'x' || op == 'X' || op == '\u00d7') {
+                    result = operand1 * operand2;
+                } else if (op == '/' || op == '\u00f7') {
+                    if (operand2 == 0) {
+                        return null;
+                    }
+                    result = operand1 / operand2;
+                } else if (op == '%') {
+                    if (operand2 == 0) {
+                        return null;
+                    }
+                    result = operand1 % operand2;
+                } else if (op == '^' || op == '$') {
+                    if (operand2 < 0) {
+                        return null;
+                    }
+                    result = Math.pow(operand1, operand2);
+                }
+                stack[++topIndex] = result;
+            }
+        }
+        if (Double.isNaN(stack[topIndex]) || Double.isInfinite(stack[topIndex])) {
+            return null;
+        }
+        return stack[topIndex];
     }
 
     /**
@@ -196,38 +489,22 @@ public class Stack {
         String[] tokens = tokenize(postfix);
         
         // Use a local stack to compute the result without affecting the instance stack.
-        java.util.Stack<Integer> tempStack = new java.util.Stack<>();
-        
-        for (String token : tokens) {
-            if (token.matches("-?\\d+")) {
-                tempStack.push(Integer.parseInt(token));
-            } else {
-                int operand2 = tempStack.pop(); // The second operand is popped first
-                int operand1 = tempStack.pop(); // The first operand is popped second
-                int result = 0;
-                
-                // Perform the corresponding arithmetic operation.
-                switch (token) {
-                    case "+":
-                        result = operand1 + operand2;
-                        break;
-                    case "-":
-                        result = operand1 - operand2;
-                        break;
-                    case "*":
-                        result = operand1 * operand2;
-                        break;
-                    case "/":
-                        if (operand2 == 0) {
-                            return -1; // Prevent division by zero
-                        }
-                        result = operand1 / operand2;
-                        break;
+        try {
+            if (containsDecimal(tokens)) {
+                Double value = evalDouble(tokens);
+                if (value == null) {
+                    return -1; // Prevent division by zero
                 }
-                tempStack.push(result);
+                return (int) value.doubleValue(); // The final result is the only element left
             }
+            Integer value = evalInt(tokens);
+            if (value == null) {
+                return -1; // Prevent division by zero
+            }
+            return value.intValue(); // The final result is the only element left
+        } catch (RuntimeException e) {
+            return -1;
         }
-        return tempStack.pop(); // The final result is the only element left
     }
 
     /**
