@@ -359,7 +359,10 @@ public class Stack {
         }
         
         // Use a local standard library stack for validation to keep the instance stack clean.
-        int depth = 0;
+        Integer[] savedValues = values;
+        int savedTop = top;
+        values = new Integer[Math.max(tokens.length, 1)];
+        top = -1;
         
         try {
             for (String token : tokens) {
@@ -368,35 +371,53 @@ public class Stack {
                     if (!fitsInInt(token)) {
                         return 0;
                     }
-                    depth++;
+                    int number = token.indexOf('.') >= 0 ? 0 : Integer.parseInt(token);
+                    if (push(number) == null) {
+                        return 0;
+                    }
                 } else if (isOperatorToken(token)) {
                     // If the token is an operator, ensure there are at least two operands.
-                    if (depth < 2) {
+                    Double operand2 = pop();
+                    Double operand1 = pop();
+                    if (operand1 == null || operand2 == null) {
                         return 0; // Invalid: not enough operands for the operator
                     }
-                    depth--; // Push a placeholder result
+                    if (push(0) == null) {
+                        return 0; // Push a placeholder result
+                    }
                 } else {
                     return 0; // Invalid character encountered
                 }
             }
+            // A valid postfix expression should result in exactly one value on the stack.
+            if (isEmpty()) {
+                return 0;
+            }
+            pop();
+            return isEmpty() ? 1 : 0;
         } catch (RuntimeException e) {
             return 0;
+        } finally {
+            values = savedValues;
+            top = savedTop;
         }
-        
-        // A valid postfix expression should result in exactly one value on the stack.
-        return (depth == 1) ? 1 : 0;
     }
 
     private Integer evalInt(String[] tokens) {
-        int[] stack = new int[tokens.length];
-        int topIndex = -1;
         for (int i = 0; i < tokens.length; i++) {
             String token = tokens[i];
             if (isNumberToken(token)) {
-                stack[++topIndex] = Integer.parseInt(token);
+                if (push(Integer.parseInt(token)) == null) {
+                    return null;
+                }
             } else {
-                int operand2 = stack[topIndex--]; // The second operand is popped first
-                int operand1 = stack[topIndex--]; // The first operand is popped second
+                Double second = pop(); // The second operand is popped first
+                Double first = pop(); // The first operand is popped second
+                if (first == null || second == null) {
+                    return null;
+                }
+                int operand2 = second.intValue();
+                int operand1 = first.intValue();
                 int result = 0;
                 // Perform the corresponding arithmetic operation.
                 char op = token.charAt(0);
@@ -425,10 +446,15 @@ public class Stack {
                         result *= operand1;
                     }
                 }
-                stack[++topIndex] = result;
+                if (push(result) == null) {
+                    return null;
+                }
             }
         }
-        return stack[topIndex]; // The final result is the only element left
+        if (isEmpty()) {
+            return null;
+        }
+        return top(); // The final result is the only element left
     }
 
     private Double evalDouble(String[] tokens) {
@@ -489,20 +515,32 @@ public class Stack {
         String[] tokens = tokenize(postfix);
         
         // Use a local stack to compute the result without affecting the instance stack.
+        Integer[] savedValues = values;
+        int savedTop = top;
         try {
+            values = new Integer[Math.max(tokens.length, 1)];
+            top = -1;
             if (containsDecimal(tokens)) {
                 Double value = evalDouble(tokens);
                 if (value == null) {
+                    values = savedValues;
+                    top = savedTop;
                     return -1; // Prevent division by zero
                 }
-                return (int) value.doubleValue(); // The final result is the only element left
+                int result = (int) value.doubleValue();
+                push(result);
+                return result; // The final result is the only element left
             }
             Integer value = evalInt(tokens);
             if (value == null) {
+                values = savedValues;
+                top = savedTop;
                 return -1; // Prevent division by zero
             }
             return value.intValue(); // The final result is the only element left
         } catch (RuntimeException e) {
+            values = savedValues;
+            top = savedTop;
             return -1;
         }
     }
