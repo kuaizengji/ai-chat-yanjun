@@ -1,120 +1,219 @@
-import java.util.regex.Pattern;
-
-/**
- * The Stack class represents a last-in-first-out (LIFO) stack of Integer values.
- * It also provides utility methods to validate and compute postfix expressions.
- * 
- * @author Student
- * @version 1.0
- */
+/* Requirement:
+	(1) UML of Stack(03 Stacks.pptx, page 9):
+		|-----------------------------------------------|
+		|                    Stack                      |
+		|-----------------------------------------------|
+		|   - values: Double[]                          |
+		|   - top: int                                  |
+		|-----------------------------------------------|
+		|   + Stack(int size)                           |
+		|   + isEmpty(): boolean                        |
+		|   + isFull(): boolean                         |
+		|   + top(): Double                             |
+		|   + push(double x): Double                    |
+		|   + pop(): Double                             |
+		|   + displayStack(): void                      |
+		|-----------------------------------------------|
+	
+	(2) You are NOT allowed to modify the code originally given in Stack.java
+	(3) You are NOT allowed to modify the filename of Stack.java
+	(4) You are NOT allowed to use Chinese characters in codes or comments
+	(5)	You should add some comments and indentations to make the codes user friendly
+	(6) Following is sample output after running main() in Stack.java:
+	
+		true
+		The stack has 2 items:
+		top -->	|	  5.0000	|
+				|	 -3.0000	|
+				+---------------+
+		The stack has 4 items:
+		top -->	|	  2.0000	|
+				|	  1.0000	|
+				|	  5.0000	|
+				|	 -3.0000	|
+				+---------------+
+		The top is: 2.0
+		true
+		The stack is empty:
+		top -->	+---------------+
+		
+	*/
 public class Stack {
 
-    // Array to store the elements of the stack. It holds Integer objects.
-    private Integer[] values;
-    
-    // Index of the top element. Initialized to -1 indicating an empty stack.
     private int top;
+    private Double[] values;
 
-    /**
-     * Constructs an empty stack with the specified maximum capacity.
-     * 
-     * @param size the maximum number of elements the stack can hold.
-     */
     public Stack(int size) {
-        values = new Integer[size];
-        top = -1; // Stack is initially empty
+        values = new Double[size];
+        top = -1;
     }
 
-    /**
-     * Checks whether the stack is currently empty.
-     * 
-     * @return true if the stack contains no elements, false otherwise.
-     */
     public boolean isEmpty() {
+        // top range [0, values.length)
         return top == -1;
     }
 
-    /**
-     * Checks whether the stack has reached its maximum capacity.
-     * 
-     * @return true if the stack is full, false otherwise.
-     */
     public boolean isFull() {
+        // top range [0, values.length)
         return top == values.length - 1;
     }
 
-    /**
-     * Retrieves the top element of the stack without removing it.
-     * 
-     * @return the top element as an Integer, or null if the stack is empty.
-     */
-    public Integer top() {
-        if (isEmpty()) {
-            return null; // Return null if there is no top element
-        }
+    public double top() {
+        // return the top value
         return values[top];
     }
 
-    /**
-     * Pushes a new element onto the top of the stack.
-     * The double value is cast to an integer for storage.
-     * 
-     * @param x the double value to be pushed onto the stack.
-     * @return the pushed element as an Integer, or null if the stack is full.
-     */
-    public Integer push(double x) {
-        if (isFull()) {
-            return null; // Cannot push if stack is full
-        }
-        top++; // Move the top index upwards
-        values[top] = (int) x; // Cast double to int for storage
-        return values[top];
+    public Double push(double x) {
+        if (isFull())
+            return null; // if full, cannot push
+        values[++top] = Double.valueOf(x);
+        return top();
     }
 
-    /**
-     * Removes and returns the top element of the stack.
-     * 
-     * @return the removed element as a Double, or null if the stack is empty.
-     */
     public Double pop() {
-        if (isEmpty()) {
-            return null; // Cannot pop from an empty stack
+        if (isEmpty())
+            return null; // if empty, cannot pop
+        return values[top--];
+    }
+
+    public void displayStack() {
+        System.out.print("top -->");
+        // iterate this stack
+        for (int i = top; i >= 0; i--)
+            // Display the values in the stack
+            System.out.printf("\t|  %8.4f\t|\n", values[i]);
+        System.out.println("\t+---------------+");
+    }
+
+    // begin Programming Assignment 1
+
+    /**
+     * Checks whether a postfix expression is valid.
+     * Tokens are separated by commas, as in "11,1,3,*,/".
+     * A space-separated expression is also accepted when it contains no comma.
+     *
+     * @param postfix the postfix expression.
+     * @return 1 if the expression is valid, 0 otherwise.
+     */
+    public static int isValidPostfix(String postfix) {
+        String[] tokens = tokenize(postfix);
+        if (tokens.length == 0) {
+            return 0; // empty input is not a valid expression
         }
-        Double removed = values[top].doubleValue(); // Convert Integer to Double
-        values[top] = null; // Clear the reference for garbage collection
-        top--; // Move the top index downwards
-        return removed;
+        int depth = 0;
+        for (int i = 0; i < tokens.length; i++) {
+            String token = tokens[i];
+            if (isNumber(token)) {
+                depth++; // an operand increases the stack depth
+            } else if (isOperator(token)) {
+                // an operator consumes two operands and pushes one result
+                if (depth < 2) {
+                    return 0;
+                }
+                depth--;
+            } else {
+                return 0; // unknown token
+            }
+        }
+        // exactly one value must remain
+        return depth == 1 ? 1 : 0;
     }
 
     /**
-     * Displays the current elements of the stack in a formatted manner.
-     * The top element is printed first, followed by the rest.
+     * Evaluates a postfix expression.
+     * Arithmetic is done with double values, and only the final result is
+     * converted to int. Returns -1 when the expression is invalid.
+     *
+     * @param postfix the postfix expression.
+     * @return the integer result, or -1 when the expression is invalid.
      */
-    public void displayStack() {
-        if (isEmpty()) {
-            System.out.println("Stack is empty.");
-            return;
+    public static int computePostfix(String postfix) {
+        if (isValidPostfix(postfix) == 0) {
+            return -1;
         }
-        System.out.println("Top --> " + values[top]);
-        for (int i = top - 1; i >= 0; i--) {
-            System.out.println("        " + values[i]);
+        // assume the length of postfix will not exceed 50
+        String[] tokens = tokenize(postfix);
+        Stack stack = new Stack(Math.max(50, tokens.length));
+        for (int i = 0; i < tokens.length; i++) {
+            String token = tokens[i];
+            if (isNumber(token)) {
+                stack.push(Double.parseDouble(token));
+            } else {
+                // get top 2 value in stack
+                Double b = stack.pop();
+                Double a = stack.pop();
+                if (a == null || b == null) {
+                    return -1;
+                }
+                double result = 0.00;
+                // Perform the corresponding arithmetic operation.
+                switch (token) {
+                    case "+":
+                        result = a + b;
+                        break;
+                    case "-":
+                        result = a - b;
+                        break;
+                    case "*":
+                        result = a * b;
+                        break;
+                    case "/":
+                        if (b == 0) {
+                            return -1; // Prevent division by zero
+                        }
+                        result = a / b;
+                        break;
+                    default:
+                        return -1;
+                }
+                // push the result
+                stack.push(result);
+            }
         }
+        if (stack.isEmpty()) {
+            return -1;
+        }
+        // the top is the ans
+        double value = stack.pop();
+        if (Double.isNaN(value) || Double.isInfinite(value)) {
+            return -1;
+        }
+        return (int) value;
     }
 
-    private boolean isSpace(char c) {
-        return c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f';
+    // split by ',' when the expression uses commas, otherwise by whitespace
+    private static String[] tokenize(String postfix) {
+        if (postfix == null) {
+            return new String[0];
+        }
+        String trimmed = postfix.trim();
+        if (trimmed.isEmpty()) {
+            return new String[0];
+        }
+        String[] raw;
+        if (trimmed.indexOf(',') >= 0) {
+            raw = trimmed.split(",");
+        } else {
+            raw = trimmed.split("\\s+");
+        }
+        String[] tokens = new String[raw.length];
+        for (int i = 0; i < raw.length; i++) {
+            tokens[i] = raw[i].trim();
+        }
+        // A compact single-digit expression such as "53+" has no comma or space.
+        if (tokens.length == 1 && !isNumber(tokens[0]) && !isOperator(tokens[0])) {
+            String compact = tokens[0];
+            String[] chars = new String[compact.length()];
+            for (int i = 0; i < compact.length(); i++) {
+                chars[i] = String.valueOf(compact.charAt(i));
+            }
+            return chars;
+        }
+        return tokens;
     }
 
-    private boolean isOperatorChar(char c) {
-        return c == '+' || c == '-' || c == '*' || c == '/' || c == '^' || c == '%'
-                || c == '$' || c == 'x' || c == 'X' || c == '\u00d7' || c == '\u00f7';
-    }
-
-    private boolean isOperatorToken(String token) {
-        return token != null && token.length() == 1 && isOperatorChar(token.charAt(0));
-    }
-
-    private boolean isNumberToken(String token) {
+    // true when token is an integer or a decimal, with an optional sign
+    private static boolean isNumber(String token) {
         if (token == null || token.isEmpty()) {
             return false;
         }
@@ -140,443 +239,33 @@ public class Stack {
         return digit;
     }
 
-    private boolean fitsInInt(String token) {
-        if (token.indexOf('.') >= 0) {
-            return true;
-        }
-        try {
-            long value = Long.parseLong(token);
-            return value >= Integer.MIN_VALUE && value <= Integer.MAX_VALUE;
-        } catch (NumberFormatException e) {
-            return false;
-        }
+    // true when token is one of the four arithmetic operators
+    private static boolean isOperator(String token) {
+        return "+".equals(token) || "-".equals(token) || "*".equals(token) || "/".equals(token);
     }
 
-    private boolean containsDecimal(String[] tokens) {
-        if (tokens == null) {
-            return false;
-        }
-        for (int i = 0; i < tokens.length; i++) {
-            if (tokens[i] != null && tokens[i].indexOf('.') >= 0) {
-                return true;
-            }
-        }
-        return false;
-    }
+    // end Programming Assignment 1
 
-    private boolean containsMultiDigit(String[] tokens) {
-        if (tokens == null) {
-            return false;
-        }
-        for (int i = 0; i < tokens.length; i++) {
-            if (!isNumberToken(tokens[i])) {
-                continue;
-            }
-            int digits = 0;
-            String token = tokens[i];
-            for (int j = 0; j < token.length(); j++) {
-                if (token.charAt(j) >= '0' && token.charAt(j) <= '9') {
-                    digits++;
-                }
-            }
-            if (digits >= 2) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private boolean isStructurallyValid(String[] tokens) {
-        if (tokens == null || tokens.length == 0) {
-            return false;
-        }
-        int depth = 0;
-        for (int i = 0; i < tokens.length; i++) {
-            String token = tokens[i];
-            if (isNumberToken(token)) {
-                if (!fitsInInt(token)) {
-                    return false;
-                }
-                depth++;
-            } else if (isOperatorToken(token)) {
-                if (depth < 2) {
-                    return false;
-                }
-                depth--;
-            } else {
-                return false;
-            }
-        }
-        return depth == 1;
-    }
-
-    private String[] scanTokens(String s) {
-        String[] buf = new String[s.length()];
-        int n = 0;
-        int i = 0;
-        while (i < s.length()) {
-            char c = s.charAt(i);
-            if (isSpace(c)) {
-                i++;
-                continue;
-            }
-            boolean nextIsNumber = i + 1 < s.length()
-                    && (Character.isDigit(s.charAt(i + 1)) || s.charAt(i + 1) == '.');
-            boolean sign = (c == '+' || c == '-') && nextIsNumber
-                    && (i == 0 || isSpace(s.charAt(i - 1)) || isOperatorChar(s.charAt(i - 1)));
-            if (Character.isDigit(c) || c == '.' || sign) {
-                int start = i;
-                if (sign) {
-                    i++;
-                }
-                boolean digit = false;
-                boolean dot = false;
-                while (i < s.length()) {
-                    char d = s.charAt(i);
-                    if (Character.isDigit(d)) {
-                        digit = true;
-                        i++;
-                    } else if (d == '.' && !dot) {
-                        dot = true;
-                        i++;
-                    } else {
-                        break;
-                    }
-                }
-                if (!digit) {
-                    buf[n++] = String.valueOf(c);
-                    i = start + 1;
-                    continue;
-                }
-                buf[n++] = s.substring(start, i);
-            } else if (isOperatorChar(c)) {
-                buf[n++] = String.valueOf(c);
-                i++;
-            } else {
-                buf[n++] = String.valueOf(c);
-                i++;
-            }
-        }
-        String[] tokens = new String[n];
-        for (int k = 0; k < n; k++) {
-            tokens[k] = buf[k];
-        }
-        return tokens;
-    }
-
-    private String[] singleDigitTokens(String s) {
-        StringBuilder compact = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
-            if (!isSpace(s.charAt(i))) {
-                compact.append(s.charAt(i));
-            }
-        }
-        String[] tokens = new String[compact.length()];
-        for (int i = 0; i < compact.length(); i++) {
-            tokens[i] = String.valueOf(compact.charAt(i));
-        }
-        return tokens;
-    }
-
-    /**
-     * Tokenizes a postfix expression into individual numbers and operators.
-     * Handles both space-separated formats (e.g., "5 3 +") and continuous 
-     * single-digit formats (e.g., "53+"), as well as negative numbers.
-     * 
-     * @param postfix the postfix expression string.
-     * @return an array of string tokens representing numbers and operators.
-     */
-    private String[] tokenize(String postfix) {
-        if (postfix == null) {
-            return new String[0];
-        }
-        String trimmed = postfix.trim();
-        if (trimmed.length() >= 2
-                && ((trimmed.charAt(0) == '"' && trimmed.charAt(trimmed.length() - 1) == '"')
-                || (trimmed.charAt(0) == '\'' && trimmed.charAt(trimmed.length() - 1) == '\''))) {
-            trimmed = trimmed.substring(1, trimmed.length() - 1).trim();
-        }
-        if (trimmed.isEmpty()) {
-            return new String[0];
-        }
-        String normalized = trimmed.replace(',', ' ').replace(';', ' ');
-        int end = normalized.length();
-        while (end > 0) {
-            char tail = normalized.charAt(end - 1);
-            if (isSpace(tail) || tail == '=' || tail == '#' || tail == '\uFF1D') {
-                end--;
-            } else {
-                break;
-            }
-        }
-        normalized = normalized.substring(0, end).trim();
-        if (normalized.isEmpty()) {
-            return new String[0];
-        }
-        if (isNumberToken(normalized) && normalized.indexOf(' ') < 0
-                && normalized.indexOf('\t') < 0) {
-            return new String[] { normalized };
-        }
-
-        // Check if the expression contains whitespace (indicates separate tokens).
-        // Split by whitespace; this also captures negative numbers like "-3".
-        // No whitespace: treat each character as a separate token.
-        // This handles the common single-digit continuous format.
-        String[] greedy = scanTokens(normalized);
-        boolean spaced = false;
-        for (int i = 0; i < normalized.length(); i++) {
-            if (isSpace(normalized.charAt(i))) {
-                spaced = true;
-                break;
-            }
-        }
-        if (isStructurallyValid(greedy)
-                && (spaced || containsMultiDigit(greedy) || containsDecimal(greedy))) {
-            return greedy;
-        }
-        String[] single = singleDigitTokens(normalized);
-        if (isStructurallyValid(single)) {
-            return single;
-        }
-        return greedy;
-    }
-
-    /**
-     * Validates whether a given string is a correctly formatted postfix expression.
-     * Uses a temporary local stack to avoid modifying the instance's state.
-     * 
-     * @param postfix the string containing the postfix expression to validate.
-     * @return 1 if the expression is valid, 0 otherwise.
-     */
-    public int isValidPostfix(String postfix) {
-        if (postfix == null || postfix.trim().isEmpty()) {
-            return 0; // Empty string is not a valid expression
-        }
-        
-        String[] tokens = tokenize(postfix);
-        if (tokens.length == 0) {
-            return 0;
-        }
-        
-        // Use a local standard library stack for validation to keep the instance stack clean.
-        Integer[] savedValues = values;
-        int savedTop = top;
-        values = new Integer[Math.max(tokens.length, 1)];
-        top = -1;
-        
-        try {
-            for (String token : tokens) {
-                if (isNumberToken(token)) {
-                    // If the token is a number (including negative), push it onto the stack.
-                    if (!fitsInInt(token)) {
-                        return 0;
-                    }
-                    int number = token.indexOf('.') >= 0 ? 0 : Integer.parseInt(token);
-                    if (push(number) == null) {
-                        return 0;
-                    }
-                } else if (isOperatorToken(token)) {
-                    // If the token is an operator, ensure there are at least two operands.
-                    Double operand2 = pop();
-                    Double operand1 = pop();
-                    if (operand1 == null || operand2 == null) {
-                        return 0; // Invalid: not enough operands for the operator
-                    }
-                    if (push(0) == null) {
-                        return 0; // Push a placeholder result
-                    }
-                } else {
-                    return 0; // Invalid character encountered
-                }
-            }
-            // A valid postfix expression should result in exactly one value on the stack.
-            if (isEmpty()) {
-                return 0;
-            }
-            pop();
-            return isEmpty() ? 1 : 0;
-        } catch (RuntimeException e) {
-            return 0;
-        } finally {
-            values = savedValues;
-            top = savedTop;
-        }
-    }
-
-    private Integer evalInt(String[] tokens) {
-        for (int i = 0; i < tokens.length; i++) {
-            String token = tokens[i];
-            if (isNumberToken(token)) {
-                if (push(Integer.parseInt(token)) == null) {
-                    return null;
-                }
-            } else {
-                Double second = pop(); // The second operand is popped first
-                Double first = pop(); // The first operand is popped second
-                if (first == null || second == null) {
-                    return null;
-                }
-                int operand2 = second.intValue();
-                int operand1 = first.intValue();
-                int result = 0;
-                // Perform the corresponding arithmetic operation.
-                char op = token.charAt(0);
-                if (op == '+') {
-                    result = operand1 + operand2;
-                } else if (op == '-') {
-                    result = operand1 - operand2;
-                } else if (op == '*' || op == 'x' || op == 'X' || op == '\u00d7') {
-                    result = operand1 * operand2;
-                } else if (op == '/' || op == '\u00f7') {
-                    if (operand2 == 0) {
-                        return null; // Prevent division by zero
-                    }
-                    result = operand1 / operand2;
-                } else if (op == '%') {
-                    if (operand2 == 0) {
-                        return null; // Prevent division by zero
-                    }
-                    result = operand1 % operand2;
-                } else if (op == '^' || op == '$') {
-                    if (operand2 < 0) {
-                        return null;
-                    }
-                    result = 1;
-                    for (int p = 0; p < operand2; p++) {
-                        result *= operand1;
-                    }
-                }
-                if (push(result) == null) {
-                    return null;
-                }
-            }
-        }
-        if (isEmpty()) {
-            return null;
-        }
-        return top(); // The final result is the only element left
-    }
-
-    private Double evalDouble(String[] tokens) {
-        double[] stack = new double[tokens.length];
-        int topIndex = -1;
-        for (int i = 0; i < tokens.length; i++) {
-            String token = tokens[i];
-            if (isNumberToken(token)) {
-                stack[++topIndex] = Double.parseDouble(token);
-            } else {
-                double operand2 = stack[topIndex--];
-                double operand1 = stack[topIndex--];
-                double result = 0;
-                char op = token.charAt(0);
-                if (op == '+') {
-                    result = operand1 + operand2;
-                } else if (op == '-') {
-                    result = operand1 - operand2;
-                } else if (op == '*' || op == 'x' || op == 'X' || op == '\u00d7') {
-                    result = operand1 * operand2;
-                } else if (op == '/' || op == '\u00f7') {
-                    if (operand2 == 0) {
-                        return null;
-                    }
-                    result = operand1 / operand2;
-                } else if (op == '%') {
-                    if (operand2 == 0) {
-                        return null;
-                    }
-                    result = operand1 % operand2;
-                } else if (op == '^' || op == '$') {
-                    if (operand2 < 0) {
-                        return null;
-                    }
-                    result = Math.pow(operand1, operand2);
-                }
-                stack[++topIndex] = result;
-            }
-        }
-        if (Double.isNaN(stack[topIndex]) || Double.isInfinite(stack[topIndex])) {
-            return null;
-        }
-        return stack[topIndex];
-    }
-
-    /**
-     * Computes the result of a valid postfix expression.
-     * Assumes the expression contains only integers and basic operators (+, -, *, /).
-     * 
-     * @param postfix the string containing the postfix expression to compute.
-     * @return the integer result of the expression, or -1 if the expression is invalid.
-     */
-    public int computePostfix(String postfix) {
-        if (isValidPostfix(postfix) == 0) {
-            return -1; // Return -1 for invalid expressions
-        }
-        
-        String[] tokens = tokenize(postfix);
-        
-        // Use a local stack to compute the result without affecting the instance stack.
-        Integer[] savedValues = values;
-        int savedTop = top;
-        try {
-            values = new Integer[Math.max(tokens.length, 1)];
-            top = -1;
-            if (containsDecimal(tokens)) {
-                Double value = evalDouble(tokens);
-                if (value == null) {
-                    values = savedValues;
-                    top = savedTop;
-                    return -1; // Prevent division by zero
-                }
-                int result = (int) value.doubleValue();
-                push(result);
-                return result; // The final result is the only element left
-            }
-            Integer value = evalInt(tokens);
-            if (value == null) {
-                values = savedValues;
-                top = savedTop;
-                return -1; // Prevent division by zero
-            }
-            return value.intValue(); // The final result is the only element left
-        } catch (RuntimeException e) {
-            values = savedValues;
-            top = savedTop;
-            return -1;
-        }
-    }
-
-    /**
-     * The main method serves as a test driver for the Stack class.
-     * It tests basic stack operations and postfix expression evaluation.
-     * 
-     * @param args command-line arguments (not used).
-     */
     public static void main(String[] args) {
-        // Test basic Stack operations
-        Stack myStack = new Stack(5);
-        System.out.println("Is stack empty? " + myStack.isEmpty());
-        myStack.push(10.5);
-        myStack.push(20.7);
-        System.out.println("Top element: " + myStack.top());
+        Stack myStack = new Stack(4);
+        System.out.println(myStack.isEmpty());
+        myStack.push(-3);
+        myStack.push(5);
+        System.out.println("The stack has 2 items:");
         myStack.displayStack();
-        System.out.println("Popped element: " + myStack.pop());
-        
-        // Test postfix expression validation and computation
-        String[] validExprs = {"5 3 +", "53+", "10 20 +", "3 4 5 * +", "-5 3 +"};
-        String[] invalidExprs = {"5 + 3", "", "3 +"};
-        
-        System.out.println("\n--- Valid Expressions ---");
-        for (String expr : validExprs) {
-            System.out.println("Expr: \"" + expr + "\" | Valid: " 
-                + myStack.isValidPostfix(expr) + " | Result: " 
-                + myStack.computePostfix(expr));
-        }
-        
-        System.out.println("\n--- Invalid Expressions ---");
-        for (String expr : invalidExprs) {
-            System.out.println("Expr: \"" + expr + "\" | Valid: " 
-                + myStack.isValidPostfix(expr) + " | Result: " 
-                + myStack.computePostfix(expr));
-        }
+        myStack.push(1);
+        myStack.push(2);
+        myStack.push(-1);
+        System.out.println("The stack has 4 items:");
+        myStack.displayStack();
+        System.out.println("The top is: " + myStack.top());
+        System.out.println(myStack.isFull());
+        myStack.pop();
+        myStack.pop();
+        myStack.pop();
+        myStack.pop();
+        System.out.println("The stack is empty:");
+        myStack.displayStack();
     }
+
 }
