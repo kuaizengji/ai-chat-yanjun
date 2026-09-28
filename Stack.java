@@ -93,11 +93,11 @@ public class Stack {
      * A space-separated expression is also accepted when it contains no comma.
      *
      * @param postfix the postfix expression.
-     * @return 0 if the expression is valid, 1 otherwise.
+     * @return the same integer as computePostfix, or -1 when the expression is invalid.
      */
     public static int isValidPostfix(String postfix) {
-        // 0 means the expression is valid, 1 means it is not
-        return postfixShape(postfix) == 1 ? 0 : 1;
+        // Legality uses the same result as evaluation: -1 means invalid.
+        return computePostfix(postfix);
     }
 
     // returns 1 when the tokens form one postfix value, 0 otherwise
@@ -164,10 +164,13 @@ public class Stack {
                         result = a * b;
                         break;
                     case "/":
-                        if (b == 0) {
-                            return -1; // Prevent division by zero
-                        }
                         result = a / b;
+                        break;
+                    case "%":
+                        result = a % b;
+                        break;
+                    case "^":
+                        result = Math.pow(a, b);
                         break;
                     default:
                         return -1;
@@ -180,11 +183,7 @@ public class Stack {
             return -1;
         }
         // the top is the ans
-        double value = stack.pop();
-        if (Double.isNaN(value) || Double.isInfinite(value)) {
-            return -1;
-        }
-        return (int) value;
+        return stack.pop().intValue();
     }
 
     // split by ',' when the expression uses commas, otherwise by whitespace
@@ -202,9 +201,19 @@ public class Stack {
         } else {
             raw = trimmed.split("\\s+");
         }
-        String[] tokens = new String[raw.length];
+        int count = 0;
         for (int i = 0; i < raw.length; i++) {
-            tokens[i] = raw[i].trim();
+            if (!raw[i].trim().isEmpty()) {
+                count++;
+            }
+        }
+        String[] tokens = new String[count];
+        int n = 0;
+        for (int i = 0; i < raw.length; i++) {
+            String token = raw[i].trim();
+            if (!token.isEmpty()) {
+                tokens[n++] = token;
+            }
         }
         // A compact single-digit expression such as "53+" has no comma or space.
         if (tokens.length == 1 && !isNumber(tokens[0]) && !isOperator(tokens[0])) {
@@ -245,9 +254,10 @@ public class Stack {
         return digit;
     }
 
-    // true when token is one of the four arithmetic operators
+    // true when token is an arithmetic operator
     private static boolean isOperator(String token) {
-        return "+".equals(token) || "-".equals(token) || "*".equals(token) || "/".equals(token);
+        return "+".equals(token) || "-".equals(token) || "*".equals(token)
+                || "/".equals(token) || "%".equals(token) || "^".equals(token);
     }
 
     // end Programming Assignment 1
