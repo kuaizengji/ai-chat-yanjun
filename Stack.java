@@ -93,9 +93,15 @@ public class Stack {
      * A space-separated expression is also accepted when it contains no comma.
      *
      * @param postfix the postfix expression.
-     * @return 1 if the expression is valid, 0 otherwise.
+     * @return 0 if the expression is valid, 1 otherwise.
      */
     public static int isValidPostfix(String postfix) {
+        // 0 means the expression is valid, 1 means it is not
+        return postfixShape(postfix) == 1 ? 0 : 1;
+    }
+
+    // returns 1 when the tokens form one postfix value, 0 otherwise
+    private static int postfixShape(String postfix) {
         String[] tokens = tokenize(postfix);
         if (tokens.length == 0) {
             return 0; // empty input is not a valid expression
@@ -128,7 +134,7 @@ public class Stack {
      * @return the integer result, or -1 when the expression is invalid.
      */
     public static int computePostfix(String postfix) {
-        if (isValidPostfix(postfix) == 0) {
+        if (postfixShape(postfix) == 0) {
             return -1;
         }
         // assume the length of postfix will not exceed 50
