@@ -93,11 +93,11 @@ public class Stack {
      * A space-separated expression is also accepted when it contains no comma.
      *
      * @param postfix the postfix expression.
-     * @return the same integer as computePostfix, or -1 when the expression is invalid.
+     * @return -1 when the tokens form one postfix value, 1 otherwise.
      */
     public static int isValidPostfix(String postfix) {
-        // Legality uses the same result as evaluation: -1 means invalid.
-        return computePostfix(postfix);
+        // -1 means the expression is valid. 1 means it is not.
+        return postfixShape(postfix) == 1 ? -1 : 1;
     }
 
     // returns 1 when the tokens form one postfix value, 0 otherwise
@@ -127,8 +127,9 @@ public class Stack {
 
     /**
      * Evaluates a postfix expression.
-     * Arithmetic is done with double values, and only the final result is
-     * converted to int. Returns -1 when the expression is invalid.
+     * Whole numbers use integer division. Other values use double arithmetic,
+     * and only the final result is converted to int.
+     * Returns -1 when the expression is invalid.
      *
      * @param postfix the postfix expression.
      * @return the integer result, or -1 when the expression is invalid.
@@ -164,10 +165,25 @@ public class Stack {
                         result = a * b;
                         break;
                     case "/":
-                        result = a / b;
+                        if (b == 0) {
+                            return -1; // division by zero
+                        }
+                        // Whole numbers divide as integers, so 8,3,/,3,* is 6.
+                        if (isWhole(a) && isWhole(b)) {
+                            result = ((int) a.doubleValue()) / ((int) b.doubleValue());
+                        } else {
+                            result = a / b;
+                        }
                         break;
                     case "%":
-                        result = a % b;
+                        if (b == 0) {
+                            return -1;
+                        }
+                        if (isWhole(a) && isWhole(b)) {
+                            result = ((int) a.doubleValue()) % ((int) b.doubleValue());
+                        } else {
+                            result = a % b;
+                        }
                         break;
                     case "^":
                         result = Math.pow(a, b);
@@ -183,7 +199,17 @@ public class Stack {
             return -1;
         }
         // the top is the ans
-        return stack.pop().intValue();
+        double value = stack.pop();
+        if (Double.isNaN(value) || Double.isInfinite(value)) {
+            return -1;
+        }
+        return (int) value;
+    }
+
+    // true when x is an integer that fits in an int
+    private static boolean isWhole(double x) {
+        return !Double.isInfinite(x) && x == Math.rint(x)
+                && x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE;
     }
 
     // split by ',' when the expression uses commas, otherwise by whitespace
