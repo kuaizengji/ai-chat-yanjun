@@ -93,11 +93,11 @@ public class Stack {
      * A space-separated expression is also accepted when it contains no comma.
      *
      * @param postfix the postfix expression.
-     * @return -1 when the tokens form one postfix value, 1 otherwise.
+     * @return the same integer as computePostfix, or -1 when the expression is invalid.
      */
     public static int isValidPostfix(String postfix) {
-        // -1 means the expression is valid. 1 means it is not.
-        return postfixShape(postfix) == 1 ? -1 : 1;
+        // Same result as evaluation. -1 means the expression is invalid.
+        return computePostfix(postfix);
     }
 
     // returns 1 when the tokens form one postfix value, 0 otherwise
@@ -127,9 +127,9 @@ public class Stack {
 
     /**
      * Evaluates a postfix expression.
-     * Whole numbers use integer division. Other values use double arithmetic,
-     * and only the final result is converted to int.
-     * Returns -1 when the expression is invalid.
+     * Whole numbers use integer arithmetic with floor division.
+     * Other values use double arithmetic, and only the final result is
+     * converted to int. Returns -1 when the expression is invalid.
      *
      * @param postfix the postfix expression.
      * @return the integer result, or -1 when the expression is invalid.
@@ -154,42 +154,67 @@ public class Stack {
                 }
                 double result = 0.00;
                 // Perform the corresponding arithmetic operation.
-                switch (token) {
-                    case "+":
-                        result = a + b;
-                        break;
-                    case "-":
-                        result = a - b;
-                        break;
-                    case "*":
-                        result = a * b;
-                        break;
-                    case "/":
-                        if (b == 0) {
-                            return -1; // division by zero
-                        }
-                        // Whole numbers divide as integers, so 8,3,/,3,* is 6.
-                        if (isWhole(a) && isWhole(b)) {
-                            result = ((int) a.doubleValue()) / ((int) b.doubleValue());
-                        } else {
-                            result = a / b;
-                        }
-                        break;
-                    case "%":
-                        if (b == 0) {
+                if (isWhole(a) && isWhole(b)) {
+                    int ia = (int) a.doubleValue();
+                    int ib = (int) b.doubleValue();
+                    switch (token) {
+                        case "+":
+                            result = ia + ib; // int addition wraps on overflow
+                            break;
+                        case "-":
+                            result = ia - ib;
+                            break;
+                        case "*":
+                            result = ia * ib; // int multiplication wraps on overflow
+                            break;
+                        case "/":
+                            if (ib == 0) {
+                                return -1; // division by zero
+                            }
+                            // Floor division: -8 / 3 is -3.
+                            result = Math.floorDiv(ia, ib);
+                            break;
+                        case "%":
+                            if (ib == 0) {
+                                return -1;
+                            }
+                            result = ia % ib;
+                            break;
+                        case "^":
+                            result = Math.pow(ia, ib);
+                            break;
+                        default:
                             return -1;
-                        }
-                        if (isWhole(a) && isWhole(b)) {
-                            result = ((int) a.doubleValue()) % ((int) b.doubleValue());
-                        } else {
+                    }
+                } else {
+                    switch (token) {
+                        case "+":
+                            result = a + b;
+                            break;
+                        case "-":
+                            result = a - b;
+                            break;
+                        case "*":
+                            result = a * b;
+                            break;
+                        case "/":
+                            if (b == 0) {
+                                return -1; // division by zero
+                            }
+                            result = Math.floor(a / b);
+                            break;
+                        case "%":
+                            if (b == 0) {
+                                return -1;
+                            }
                             result = a % b;
-                        }
-                        break;
-                    case "^":
-                        result = Math.pow(a, b);
-                        break;
-                    default:
-                        return -1;
+                            break;
+                        case "^":
+                            result = Math.pow(a, b);
+                            break;
+                        default:
+                            return -1;
+                    }
                 }
                 // push the result
                 stack.push(result);
@@ -202,6 +227,9 @@ public class Stack {
         double value = stack.pop();
         if (Double.isNaN(value) || Double.isInfinite(value)) {
             return -1;
+        }
+        if (value < 0) {
+            return (int) Math.floor(value);
         }
         return (int) value;
     }
