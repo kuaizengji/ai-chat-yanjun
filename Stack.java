@@ -88,230 +88,110 @@ public class Stack {
     // begin Programming Assignment 1
 
     /**
-     * Checks whether a postfix expression is valid.
-     * Tokens are separated by commas, as in "11,1,3,*,/".
-     * A space-separated expression is also accepted when it contains no comma.
+     * Checks a comma-separated postfix expression.
+     * A whole number, with an optional sign, is one operand.
+     * An operator must be one of + - * /.
      *
      * @param postfix the postfix expression.
-     * @return the same integer as computePostfix, or -1 when the expression is invalid.
+     * @return true when exactly one value would remain.
      */
-    public static int isValidPostfix(String postfix) {
-        // Same result as evaluation. -1 means the expression is invalid.
-        return computePostfix(postfix);
-    }
-
-    // returns 1 when the tokens form one postfix value, 0 otherwise
-    private static int postfixShape(String postfix) {
-        String[] tokens = tokenize(postfix);
-        if (tokens.length == 0) {
-            return 0; // empty input is not a valid expression
+    public static boolean isValidPostfix(String postfix) {
+        if (postfix == null) {
+            return false; // missing text is not an expression
         }
+        // Keep empty pieces, so a trailing comma is not valid.
+        String[] tokens = postfix.trim().split(",", -1);
         int depth = 0;
         for (int i = 0; i < tokens.length; i++) {
-            String token = tokens[i];
-            if (isNumber(token)) {
-                depth++; // an operand increases the stack depth
-            } else if (isOperator(token)) {
-                // an operator consumes two operands and pushes one result
+            String token = tokens[i].trim();
+            if (isOperator(token)) {
+                // An operator uses two values and leaves one.
                 if (depth < 2) {
-                    return 0;
+                    return false;
                 }
                 depth--;
+            } else if (parseOperand(token) != null) {
+                depth++; // an operand adds one value
             } else {
-                return 0; // unknown token
+                return false; // unknown piece
             }
         }
-        // exactly one value must remain
-        return depth == 1 ? 1 : 0;
+        return depth == 1;
     }
 
     /**
-     * Evaluates a postfix expression.
-     * Whole numbers use integer arithmetic with floor division.
-     * Other values use double arithmetic, and only the final result is
-     * converted to int. Returns -1 when the expression is invalid.
+     * Evaluates a comma-separated postfix expression with integer arithmetic.
+     * The right operand is taken off the stack first.
      *
      * @param postfix the postfix expression.
-     * @return the integer result, or -1 when the expression is invalid.
+     * @return the integer result, or Integer.MIN_VALUE when it cannot be computed.
      */
     public static int computePostfix(String postfix) {
-        if (postfixShape(postfix) == 0) {
-            return -1;
+        if (!isValidPostfix(postfix)) {
+            return Integer.MIN_VALUE;
         }
+        String[] tokens = postfix.trim().split(",", -1);
         // assume the length of postfix will not exceed 50
-        String[] tokens = tokenize(postfix);
         Stack stack = new Stack(Math.max(50, tokens.length));
         for (int i = 0; i < tokens.length; i++) {
-            String token = tokens[i];
-            if (isNumber(token)) {
-                stack.push(Double.parseDouble(token));
-            } else {
-                // get top 2 value in stack
-                Double b = stack.pop();
-                Double a = stack.pop();
-                if (a == null || b == null) {
-                    return -1;
+            String token = tokens[i].trim();
+            if (isOperator(token)) {
+                // get top 2 value in stack; the first pop is the right operand
+                Double right = stack.pop();
+                Double left = stack.pop();
+                if (left == null || right == null) {
+                    return Integer.MIN_VALUE;
                 }
-                double result = 0.00;
+                int a = right.intValue();
+                int b = left.intValue();
+                int result;
                 // Perform the corresponding arithmetic operation.
-                if (isWhole(a) && isWhole(b)) {
-                    int ia = (int) a.doubleValue();
-                    int ib = (int) b.doubleValue();
-                    switch (token) {
-                        case "+":
-                            result = ia + ib; // int addition wraps on overflow
-                            break;
-                        case "-":
-                            result = ia - ib;
-                            break;
-                        case "*":
-                            result = ia * ib; // int multiplication wraps on overflow
-                            break;
-                        case "/":
-                            if (ib == 0) {
-                                return -1; // division by zero
-                            }
-                            // Floor division: -8 / 3 is -3.
-                            result = Math.floorDiv(ia, ib);
-                            break;
-                        case "%":
-                            if (ib == 0) {
-                                return -1;
-                            }
-                            result = ia % ib;
-                            break;
-                        case "^":
-                            result = Math.pow(ia, ib);
-                            break;
-                        default:
-                            return -1;
-                    }
-                } else {
-                    switch (token) {
-                        case "+":
-                            result = a + b;
-                            break;
-                        case "-":
-                            result = a - b;
-                            break;
-                        case "*":
-                            result = a * b;
-                            break;
-                        case "/":
-                            if (b == 0) {
-                                return -1; // division by zero
-                            }
-                            result = Math.floor(a / b);
-                            break;
-                        case "%":
-                            if (b == 0) {
-                                return -1;
-                            }
-                            result = a % b;
-                            break;
-                        case "^":
-                            result = Math.pow(a, b);
-                            break;
-                        default:
-                            return -1;
-                    }
+                switch (token) {
+                    case "+":
+                        result = b + a;
+                        break;
+                    case "-":
+                        result = b - a;
+                        break;
+                    case "*":
+                        result = b * a;
+                        break;
+                    default:
+                        if (a == 0) {
+                            return Integer.MIN_VALUE; // division by zero
+                        }
+                        result = b / a;
+                        break;
                 }
-                // push the result
                 stack.push(result);
+            } else {
+                Integer operand = parseOperand(token);
+                if (operand == null) {
+                    return Integer.MIN_VALUE;
+                }
+                stack.push(operand.intValue());
             }
         }
         if (stack.isEmpty()) {
-            return -1;
+            return Integer.MIN_VALUE;
         }
         // the top is the ans
-        double value = stack.pop();
-        if (Double.isNaN(value) || Double.isInfinite(value)) {
-            return -1;
-        }
-        if (value < 0) {
-            return (int) Math.floor(value);
-        }
-        return (int) value;
+        return stack.pop().intValue();
     }
 
-    // true when x is an integer that fits in an int
-    private static boolean isWhole(double x) {
-        return !Double.isInfinite(x) && x == Math.rint(x)
-                && x >= Integer.MIN_VALUE && x <= Integer.MAX_VALUE;
+    // a whole number, ignoring surrounding spaces; null when it is not one
+    private static Integer parseOperand(String token) {
+        try {
+            return Integer.valueOf(Integer.parseInt(token.trim()));
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 
-    // split by ',' when the expression uses commas, otherwise by whitespace
-    private static String[] tokenize(String postfix) {
-        if (postfix == null) {
-            return new String[0];
-        }
-        String trimmed = postfix.trim();
-        if (trimmed.isEmpty()) {
-            return new String[0];
-        }
-        String[] raw;
-        if (trimmed.indexOf(',') >= 0) {
-            raw = trimmed.split(",");
-        } else {
-            raw = trimmed.split("\\s+");
-        }
-        int count = 0;
-        for (int i = 0; i < raw.length; i++) {
-            if (!raw[i].trim().isEmpty()) {
-                count++;
-            }
-        }
-        String[] tokens = new String[count];
-        int n = 0;
-        for (int i = 0; i < raw.length; i++) {
-            String token = raw[i].trim();
-            if (!token.isEmpty()) {
-                tokens[n++] = token;
-            }
-        }
-        // A compact single-digit expression such as "53+" has no comma or space.
-        if (tokens.length == 1 && !isNumber(tokens[0]) && !isOperator(tokens[0])) {
-            String compact = tokens[0];
-            String[] chars = new String[compact.length()];
-            for (int i = 0; i < compact.length(); i++) {
-                chars[i] = String.valueOf(compact.charAt(i));
-            }
-            return chars;
-        }
-        return tokens;
-    }
-
-    // true when token is an integer or a decimal, with an optional sign
-    private static boolean isNumber(String token) {
-        if (token == null || token.isEmpty()) {
-            return false;
-        }
-        int i = 0;
-        if (token.charAt(0) == '+' || token.charAt(0) == '-') {
-            if (token.length() == 1) {
-                return false;
-            }
-            i++;
-        }
-        boolean digit = false;
-        boolean dot = false;
-        for (; i < token.length(); i++) {
-            char c = token.charAt(i);
-            if (c >= '0' && c <= '9') {
-                digit = true;
-            } else if (c == '.' && !dot) {
-                dot = true;
-            } else {
-                return false;
-            }
-        }
-        return digit;
-    }
-
-    // true when token is an arithmetic operator
+    // true when the piece is exactly one of the four operator signs
     private static boolean isOperator(String token) {
-        return "+".equals(token) || "-".equals(token) || "*".equals(token)
-                || "/".equals(token) || "%".equals(token) || "^".equals(token);
+        return "+".equals(token) || "-".equals(token)
+                || "*".equals(token) || "/".equals(token);
     }
 
     // end Programming Assignment 1
