@@ -1,13 +1,4 @@
-/*
- * Name:        L2T4.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun. All rights reserved.
- * Description: Read two integers m and n (n is never 0) and print
- *              their sum, difference, product, quotient, remainder
- *              and real division.
- * Student ID:  V########
- */
+/* Name: Li Yanjun Author: Li Yanjun Student ID: V######## Version: 1.0.0 Copyright: Copyright (c) 2026 Li Yanjun. All rights reserved. Description: Read integers m and n and print their sum, difference, product, quotient, remainder and real division. */
 
 #include <stdio.h>
 

@@ -1,12 +1,4 @@
-/*
- * Name:        L2T2.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun. All rights reserved.
- * Description: Print the sample line with one printf.
- *              A tab character separates each letter of "Hello".
- * Student ID:  V########
- */
+/* Name: Li Yanjun Author: Li Yanjun Student ID: V######## Version: 1.0.0 Copyright: Copyright (c) 2026 Li Yanjun. All rights reserved. Description: Print a quoted Hello line with a tab between each letter. */
 
 #include <stdio.h>
 

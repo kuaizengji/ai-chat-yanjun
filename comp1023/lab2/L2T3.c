@@ -1,12 +1,4 @@
-/*
- * Name:        L2T3.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun. All rights reserved.
- * Description: Read an integer, a real number and a character,
- *              then print the character's ASCII code and the two numbers.
- * Student ID:  V########
- */
+/* Name: Li Yanjun Author: Li Yanjun Student ID: V######## Version: 1.0.0 Copyright: Copyright (c) 2026 Li Yanjun. All rights reserved. Description: Read an integer, a real number and a character, then print the ASCII code and the two values. */
 
 #include <stdio.h>
 
