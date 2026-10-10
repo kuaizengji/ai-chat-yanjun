@@ -1,13 +1,13 @@
 /*
- * File:        L2T1.c
+ * Name:        L2T1.c
  * Author:      Li Yanjun
- * Student ID:  V########
  * Version:     1.0
- * Date:        10 October 2026
+ * Copyright:   Copyright (c) 2026 Li Yanjun. All rights reserved.
  * Description: Report how many bytes this machine uses to store
  *              char, short int, int, float, long int and double.
  *              The sizes come from sizeof, so the numbers follow
  *              the platform on which the program is compiled.
+ * Student ID:  V########
  */
 
 #include <stdio.h>
