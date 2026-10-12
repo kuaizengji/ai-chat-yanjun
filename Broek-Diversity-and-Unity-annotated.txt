@@ -8,9 +8,10 @@ In-Class Exercise #3 (12 October 2026).
 Page numbers are the journal pages. Four map plates sit between p. 177 and
 p. 182. The prose of p. 177 continues on p. 182.
 
-The Chinese text is a study translation for reading beside the PDF.
-The English NOTE blocks are annotations. They are not part of Broek's article.
-A note is placed at the passage it comments on.
+The body is an English study rendering of the article, for reading beside
+the PDF. It follows Broek's argument page by page. It is not a reprint of
+the journal text. The NOTE blocks are annotations. They are not part of
+Broek's article. A note is placed at the passage it comments on.
 
 
 HOW THE NOTES ARE MARKED
@@ -134,7 +135,15 @@ ANNOTATED TEXT
 p. 175   OPENING
 ------------------------------------------------------------------------
 
-1940 年代的上半叶，可能成为东南亚历史上最关键的时期。这十年开始时，中国、印度与澳大利亚之间的土地，除缓冲国泰国外，都在西方国家的直接控制之下。随后几个月内，这个地区约 1.5 亿居民被置于日本统治之下。赶走日本人，是否就是命运之轮转满一圈、回到 1940 年？显然不是。战争已经改变了东方与西方的经济、文化、政治关系以及心态，回到战前现状不但不可取，而且不可能。
+The first half of the 1940s may be the most decisive period in the history
+of Southeast Asia. At the start of the decade, the lands between China,
+India, and Australia were under the direct control of Western nations,
+except for Thailand, which served as a buffer state. Within a few months,
+about 150 million people in the region came under Japanese rule. Driving
+the Japanese out will not turn the wheel of fortune full circle and restore
+1940. The war has changed economic, cultural, and political relations, and
+mental attitudes, in the East and in the West. A return to the prewar
+status quo is undesirable and impossible.
 
     NOTE Q1 | PPT #4, Question 1; also the red line on Handout #4, p. 5,
              "Unattainable Return to Pre-War Status Quo"
@@ -146,7 +155,18 @@ p. 175   OPENING
     here describe Japanese military administration, labor conscription, or
     nationalist organizations. The impact is stated as a structural break.
 
-殖民问题因此比以往任何时候都更重要。讨论集中在政治独立上，这可以理解；但这个题目吸走了注意力，同样重要的经济与社会问题几乎无人过问。美国历史上的反殖民传统，自然表现为对附属地的强烈情感抗议。这种态度可以成为进步的杠杆，前提是承认：这里处理的不是一种偶然的、不道德的政治关系，而是一个根深蒂固的文化与经济复合体。殖民关系本质上是涵化过程的一种形式，因此是过渡阶段。西欧曾经作为罗马的附属地，被更先进的地中海文明所“剥削”，同时也被它所丰富；后来西欧挣脱罗马的轭，最终超过了旧帝国。
+The colonial question is therefore more important than ever. It is
+understandable that debate centers on political independence. That subject
+absorbs so much attention that economic and social questions of equal
+weight are barely discussed. The anticolonial tradition in American history
+produces a strong emotional protest against dependent territories. That
+attitude can push reform forward, but only if one sees the relation as a
+deep-rooted cultural and economic complex, not as an accidental and immoral
+political tie. Colonial rule is one form of acculturation, and therefore a
+passing phase. Western Europe was once a dependency of Rome. The more
+advanced Mediterranean civilization exploited it and also enriched it.
+Western Europe later threw off Roman rule and in time surpassed the old
+empire.
 
     NOTE Q3 / colonialism definition | PPT #4, "What is Colonialism?"
     The handout defines colonialism as domination by conquest, economic
@@ -163,7 +183,16 @@ p. 175   OPENING
 p. 176   "IMPERIAL DEVOLUTION"
 ------------------------------------------------------------------------
 
-东南亚正处于“帝国的权力下移”（imperial devolution）。只盯着这个过程的政治一面，就会看不清问题的全部。看泰国，或看热带美洲的某些共和国，就会明白：对大众而言，更高的生活水平和更民主的程序并不自动来自政治主权。菲律宾自治领正在迅速走向政治独立，经济上却仍然依赖美国。东南亚其他地方的繁荣，并不那么一边倒地建立在进入单一市场的权利之上；但这些地方相对于西方国家的位置，合在一起看，与菲律宾相对于美国的位置相同。
+Southeast Asia is in a stage Broek calls imperial devolution. Attention
+fixed only on the political side of that process hides the problem as a
+whole. Thailand, and some republics of tropical America, show that a higher
+standard of living and more democratic procedure do not follow automatically
+from political sovereignty. The Philippine commonwealth is moving quickly
+toward political independence and remains economically dependent on the
+United States. Prosperity elsewhere in Southeast Asia did not rest quite so
+heavily on access to a single market. Taken together, however, these lands
+stood toward the Western countries much as the Philippines stood toward the
+United States.
 
     NOTE Q3 | colonial economic landscape, first example
     The Philippines are his proof that political independence is not
@@ -172,7 +201,15 @@ p. 176   "IMPERIAL DEVOLUTION"
     United States, and the same range of French Indochinese trade was with
     France.
 
-日本如今在整个东南亚慷慨地“授予独立”，同时坚持一个“共荣圈”：显然由日本统治，本地人民继续做砍柴挑水的人。西方国家为了对抗日本的宣传，也拿出政治许诺。因此可以预期一个奇怪的现象：日本战败之后，本地人民追求政治自由的野心将比以往更强，但他们对西方国家的经济依赖将与从前一样，甚至更大。政治理想与经济现实的这种分裂，将是战后热带亚洲最令人困扰的问题。
+Japan now grants "independence" generously across Southeast Asia and at the
+same time insists on a co-prosperity sphere. Japan will rule. Local peoples
+will remain in a subordinate role, the hewers of wood and drawers of water.
+Western nations, answering Japanese propaganda, make political promises of
+their own. A strange result follows. After Japan's defeat, the ambition of
+local peoples for political freedom will be stronger than before, while
+their economic dependence on the West will be the same or greater. The gap
+between political ideals and economic realities will be the most troubling
+problem of postwar tropical Asia.
 
     NOTE Q1 | PPT #4, pp. 4-5: the occupation "exposed weaknesses of Western
              dominance" and "intensified nationalist movements"
@@ -187,9 +224,22 @@ p. 176   "IMPERIAL DEVOLUTION"
     sentence is "the occupation intensified nationalist movements," mark it
     as a reading of this paragraph, not as a fact he narrates.
 
-只从政治学说出发的片面做法，必然带来幻灭。被解放国家的人民会发现，独立并没有减少对市场、资本和受过训练的人员的需要，也没有解决安全问题。美国人会再次沮丧地发现，那些本应在这场自由之战结束后消失的弊病仍然存在。
+An approach that looks only at political doctrines will end in
+disillusion. Peoples in the liberated countries will find that independence
+has not reduced the need for markets, capital, and trained personnel, and
+has not solved the problem of security. Americans will again be dismayed
+that evils which were supposed to disappear with this war for freedom are
+still there.
 
-人们常假定，各民族的独立主权必定是公正世界秩序的最终目标。苏联以其众多民族，却给出了一种明显不同、而且看来令人满意的解决：平等的伙伴关系。不能先验地排除东南亚某些民族更愿意接受类似的相互依存。但无论未来是平等伙伴还是独立，达到这种成年状态之前都必须有一段准备期。道路与时间因民族而异，既取决于社会经济结构，也取决于政治凝聚力。
+It is often assumed that independent sovereignty for every people is the
+final aim of a just world order. The Soviet Union, with its many peoples,
+shows a different solution that appears to work: equal partnership. One
+cannot rule out in advance the possibility that some peoples of Southeast
+Asia would prefer a similar interdependence. Whether the future is
+partnership or independence, a period of preparation is required before
+that adult status is reached. The road and the time differ from people to
+people. They depend as much on social and economic structure as on
+political cohesion.
 
     NOTE Q5 | why he refuses immediate union
     The "period of preparation" is his reason for rejecting both instant
@@ -204,7 +254,16 @@ p. 176   "IMPERIAL DEVOLUTION"
 p. 177   REGIONAL DIVERSITY
 ------------------------------------------------------------------------
 
-这些考虑，在“现在、到处都要自由”的演说里太常被忘掉。现代通讯使地球成为一体，却没有造成一律。地球是“全球的”这一新发现，改变不了这个事实：人民首先属于自己的地方文化模式，各有人与人、人与自然的依存关系，各有自己的传统、制度和谋生方式。“民主”“自决”“独立”的含义来自地方经验，不来自全球宪章。不要提供很可能不合身的普遍现成方案，而要分析具体的区域问题，再据此制订计划。
+Speeches that demand freedom now and everywhere forget these points. Modern
+communications have made the earth one. They have not made it uniform. The
+new discovery that the earth is "global" does not change the fact that
+peoples belong first to a local culture pattern, each with its own
+relations of person to person and person to nature, its own traditions,
+institutions, and ways of making a living. Words such as democracy,
+self-determination, and independence take their meaning from local
+experience, not from global charters. Ready-made universal schemes are
+likely to fit badly. The task is to analyze the specific regional problems
+and plan from that analysis.
 
     NOTE Q2 | PPT #4, p. 5: "Natural barriers and colonial boundaries
              reinforced political fragmentation"
@@ -215,7 +274,11 @@ p. 177   REGIONAL DIVERSITY
     sentence joins those two later passages. Use both, not this paragraph
     alone.
 
-过去一年左右，已有各种计划要把前附属地并成一个或两个政治单位，由国际当局或委任统治国管理或监督，直到它们准备好完全自治。且不说其他困难，这类方案没有充分估计东南亚的多样性。
+Over the past year or so, plans have been put forward to fuse the former
+dependencies into one or two political units, administered or supervised by
+an international authority or a mandatory power until they are ready for
+full self-rule. Whatever other difficulties those plans have, they do not
+take the diversity of Southeast Asia seriously enough.
 
     NOTE Q5 | the challenge side of a regional bloc
     This is the plan he rejects: immediate fusion into one or two mandated
@@ -227,7 +290,15 @@ p. 177   REGIONAL DIVERSITY
     the start. Broek's body still includes the colonial powers as
     accountable rulers. ASEAN does not.
 
-自然环境的条件差别很大。主导事实是：低地被海洋或山脉切成碎片。如今已经淹没的巽他陆架和萨胡尔陆架上，曾经存在过大平原；现在，两栖性沿海沼泽之外的平原相对狭小。低地内部的土壤肥力对比强烈。最好的土壤来自火山沉积，分布在南侧大岛弧的内侧，从苏门答腊向东直到班达海周围的“鱼钩”，以及北侧岛弧（东亚花彩列岛的一段）：从福尔摩沙经菲律宾群岛向南，直到苏拉威西北部和哈马黑拉（图 1）。
+The natural environment varies greatly. The dominant fact is that the
+lowlands are broken up by sea or by mountains. Great plains once lay where
+the Sunda and Sahul shelves are now drowned. Beyond the amphibious coastal
+swamps, today's plains are relatively small. Inside the lowlands, soil
+fertility differs sharply. The best soils come from volcanic deposits. They
+lie along the inner side of the great southern island arc, from Sumatra
+east to the fishhook around the Banda Sea, and along the northern arc, part
+of the East Asiatic island festoons, from Formosa through the Philippines
+south to northern Celebes and Halmahera (Figure 1).
 
     NOTE Q2 | first geographical layer
     Fragmented lowlands, drowned shelves, and a volcanic-soil arc. This is
@@ -236,16 +307,28 @@ p. 177   REGIONAL DIVERSITY
     are the contrast: non-volcanic, and heavily leached. That sentence
     begins at the bottom of p. 177 and continues on p. 182.
 
-相反，英属马来亚、婆罗洲和西新几内亚没有火山，而且赤道暴雨已经把土壤淋溶得很彻底……（接 182 页）
+British Malaya, Borneo, and western New Guinea, by contrast, are
+non-volcanic, and heavy equatorial rain has leached their soils thoroughly.
+The sentence continues on p. 182.
 
 
 ------------------------------------------------------------------------
 FIGURE 1   VOLCANOES AND ORIENTATION (map plate between pp. 177 and 182)
 ------------------------------------------------------------------------
 
-图 1 用 100 米等高线显示低地狭小，用 200 米等深线显示大陆架。巽他陆架与萨胡尔陆架之间，以及向北延续到菲律宾的地带，近期仍在发生垂直运动，形成被深海盆分开的山地岛链。火山分布据此绘制。
+Figure 1 uses the 100-meter contour to show how small the lowlands are, and
+the 200-meter bathymetric line to show the continental shelves. Between the
+Sunda shelf and the Sahul shelf, and northward into the Philippines, recent
+vertical movement has produced mountainous island chains separated by deep
+sea basins. The volcanoes are plotted on that base.
 
-图注中与日本占领直接相关的事实：1941 年 3 月，日本政府以“调解人”的身份，把老挝和柬埔寨的一部分（图上 1 和 2）划给泰国。其余边界变更于 1943 年 7 月初由日本电台宣布。掸邦的一部分（点名景栋与孟潘）并入泰国（3）。马来亚北部四邦，即玻璃市和吉打（4）、吉兰丹和丁加奴（5），被“割让”给泰国。
+The caption also records the occupation's boundary changes. In March 1941
+the Japanese government, acting as mediator, allotted parts of Laos and
+Cambodia to Thailand (marked 1 and 2). The other changes were announced by
+Japanese radio in early July 1943. Part of the Shan States, including
+Kentung and Mong Pan, was added to Thailand (3). The four northern Malay
+states were ceded to Thailand: Perlis and Kedah (4), and Kelantan and
+Trengganu (5).
 
     NOTE Q1 | the only passage of concrete occupation geography
     These boundary transfers are the article's specific political map of
@@ -260,7 +343,18 @@ FIGURE 1   VOLCANOES AND ORIENTATION (map plate between pp. 177 and 182)
 FIGURE 2   RAINFALL (map plate)
 ------------------------------------------------------------------------
 
-标为 1 的地区包括缅甸、泰国大部、法属印度支那内陆、菲律宾西北部和小巽他群岛中段，有明显的“干季风”。这些地区若正对带雨风（缅甸海岸、菲律宾西部），湿季风的雨量可以使年总量超过 80 英寸，甚至高于赤道地区。若开海岸的实兑达到 207 英寸。标为 2 的地区干季不那么显著。爪哇从 10 月到 5 月受亚洲西北季风影响；4 月到 11 月东南季风盛行，南岸有雨，但总体上比西北季风干。因此爪哇西部和整个南岸年雨量高且没有干季，东北部则有实际上干燥的月份。
+Areas marked 1, including Burma, most of Thailand, interior French
+Indochina, the northwestern Philippines, and the middle Lesser Sunda
+Islands, have a pronounced dry monsoon. Where those areas face the
+rain-bearing winds, as on the Burma coast and in the western Philippines,
+the wet monsoon is so heavy that the annual total exceeds 80 inches and can
+exceed the rainfall of equatorial areas. Akyab, on the Arakan coast,
+reaches 207 inches. Areas marked 2 have a less marked dry season. Java is
+under the Asian northwest monsoon from October to May. From April to
+November the southeast monsoon prevails. It brings rain to the south coast
+but is generally drier than the northwest monsoon. Western Java and the
+whole south coast therefore have high annual rainfall and no dry season,
+while the northeast has months that are practically dry.
 
     NOTE PPT3 | "The Lands Below the Wind"; also NOTE Q2
     Handout #3 defines a southwest monsoon (mid-May to September, rainy and
@@ -277,9 +371,21 @@ FIGURE 3   POPULATION DENSITY, about 1940-1941
 FIGURE 4   AVERAGE ANNUAL INCREASE
 ------------------------------------------------------------------------
 
-图 3 按行政区计算密度，以便全区域比较。安南沿海看起来密度偏低，是因为行政区把拥挤的海岸和稀疏的山地算在一起。城市若单独设普查单位，被并入相邻地区。
+Figure 3 calculates density by administrative district so that the whole
+region can be compared. The Annam coast looks less crowded than it is,
+because the districts join the crowded shore to sparsely settled uplands.
+Cities that were separate census units are included in the neighboring
+districts.
 
-图 4 是当时第一次试图画出全东南亚人口粗增长率的图。法属印度支那的数据，以及缅甸与泰国之间的反差，质量可疑。菲律宾、爪哇、巴厘、苏门答腊大部、苏拉威西北部和南部、英属马来亚、缅甸本部较为可靠。作为对照，他给出的年均增长率是：日本本土 1.12%，印度 1.5%，意大利 0.98%，美国 0.72%，英国 0.4%。东南亚的许多地区高于这些数字。
+Figure 4 is, so far as Broek knows, the first attempt to map the crude rate
+of population growth for the whole of Southeast Asia. The figures for
+French Indochina, and the contrast between Burma and Thailand, are of
+doubtful quality. The Philippines, Java, Bali, most of Sumatra, northern
+and southern Celebes, British Malaya, and Burma proper are more reliable.
+For comparison he gives annual rates of 1.12 percent for Japan proper,
+1.5 percent for India, 0.98 percent for Italy, 0.72 percent for the United
+States, and 0.4 percent for Great Britain. Many parts of Southeast Asia
+stand above those rates.
 
     NOTE Q2 | these two maps are the demographic half of Question 2
     Density (Figure 3) shows concentration. Growth (Figure 4) shows that
@@ -293,9 +399,25 @@ FIGURE 4   AVERAGE ANNUAL INCREASE
 p. 182   SOILS, SETTLEMENT, MIGRATION
 ------------------------------------------------------------------------
 
-（承接 177 页）淋溶限制了适宜作物的范围，产量低于火山地区。缅甸、泰国和法属印度支那没有活火山。它们的冲积土总体上不如爪哇肥沃，但淋溶程度也轻于赤道带。
+Continued from p. 177. Leaching limits the range of suitable crops, and
+yields are lower than on volcanic land. Burma, Thailand, and French
+Indochina have no active volcanoes. Their alluvial soils are on the whole
+less rich than Java's, but they are also less leached than the soils of
+the equatorial zone.
 
-定居在很大程度上由寻找水田决定，并且反映上述差别。人口高度集中在冲积平原上。新几内亚、婆罗洲、苏门答腊和马来亚是例外，那里沼泽或淋溶土占优势（图 3）。外部力量加剧了对比，而不是抹平对比。中国人的筑堤和精耕技术，提高了红河三角洲和安南海岸的承载力。爪哇和吕宋是马来世界条件最好的岛屿，成为殖民开发的中心，人口自 19 世纪初以来增至十倍。这三个地区的人口压力已经到达危险点。下东京和爪哇的平均密度约为每平方英里 1000 人。吕宋中部为 600 人，但不良的土地制度使压力大于密度数字本身所显示的程度。
+Settlement is largely a search for wet-rice fields, and it reflects those
+differences. Population is highly concentrated on the alluvial plains. New
+Guinea, Borneo, Sumatra, and Malaya are exceptions, because swamp or
+leached soil prevails there (Figure 3). Outside forces have sharpened the
+contrasts rather than smoothed them. Chinese dike building and intensive
+farming raised the carrying capacity of the Red River delta and the Annam
+coast. Java and Luzon, the most favored islands of the Malay world, became
+centers of colonial development, and their populations have grown tenfold
+since the early nineteenth century. In these three areas population
+pressure has reached a danger point. In lower Tongking and on Java the
+average density is about 1,000 persons to the square mile. In central
+Luzon it is 600, but poor conditions of land tenure make the pressure
+greater than the density figure alone suggests.
 
     NOTE PPT3 | "Little China" / Sinicization; also NOTE Q3 and NOTE Q4
     "The Chinese arts of dike building and intensive farming" is the only
@@ -307,7 +429,21 @@ p. 182   SOILS, SETTLEMENT, MIGRATION
     The tenfold population increase on Java and Luzon is attributed to
     colonial development, so the same paragraph also serves Question 3.
 
-近几十年的普查表明，即使充分估计登记误差，某些人口稀疏地区的年均增长率仍远高于传统核心（图 4）。这并不是说人口将在全区域均匀铺开。几乎空无一人的地区，绝对人数稍有增加，百分比就会很高。它的含义是：现代文明以道路、卫生或资源开发的形式，把一些潜在有利的地区抬到更高的机会水平，无论对本地居民还是对移民。苏门答腊南部，尤其是棉兰老的高增长率，分别反映爪哇人和菲律宾人的移入。马来亚西部和苏门答腊东部棉兰一带的增长率也强烈受到移民影响，但这里的移民大多是“过路之鸟”：橡胶园和锡矿景气时大批到来，1930 年代初萧条时离开。其余高增长率若不是普查估计有误，则主要来自本地人口的增加。
+Censuses of recent decades show that, even after ample allowance for errors
+of enumeration, the average annual rate of growth in some thinly settled
+areas has been much higher than in the old cores (Figure 4). This does not
+mean that population is spreading evenly over the region. In a nearly empty
+district a small absolute increase produces a high percentage. What it does
+mean is that modern civilization, in the form of roads, hygiene, or the
+development of resources, lifts some potentially favorable areas to a
+higher level of opportunity, for local people or for immigrants. The high
+rates in southern Sumatra and especially in Mindanao reflect the arrival of
+Javanese and Filipinos. Rates in western Malaya and around Medan in eastern
+Sumatra are also strongly affected by immigration, but most of those
+immigrants were birds of passage. They came in large numbers during the
+boom in rubber estates and tin mines, and they left in the depression of
+the early 1930s. Elsewhere, high rates, if they are not bad census
+estimates, come mainly from increase of the local population.
 
     NOTE Q3 | export crops redraw the population map
     Rubber estates and tin mines pull temporary migrants into western
@@ -321,7 +457,15 @@ p. 182   SOILS, SETTLEMENT, MIGRATION
 p. 183   CARRYING CAPACITY, LANGUAGE, "FARTHER INDIA"
 ------------------------------------------------------------------------
 
-应当重复：例如婆罗洲和新几内亚平原的稀疏定居并不是偶然。它们的承载力本来就低于现今的人口密集区。若尊重当地居民的权利，就必须为大片可耕地保留未来之需。因此，可供安置现今拥挤地区过剩人口的土地，比乍看之下少得多。这一点既否定了日本对这些南方地区提出的生存空间要求，也是对战后以欧洲难民来此殖民的各种方案的警告。
+The sparse settlement of the plains of Borneo and New Guinea, for example,
+is not an accident. Their carrying capacity is inherently lower than that
+of the present crowded areas. Respect for the rights of the local
+populations requires that large tracts of arable land be reserved for their
+future needs. The land available for resettling surplus people from the
+crowded districts is therefore much smaller than it first appears. That
+fact undercuts Japanese claims to living space in these southern regions,
+and it warns against postwar schemes to colonize the same lands with
+European refugees.
 
     NOTE Q1 | geography used against a Japanese claim
     This is not a battle narrative. It uses carrying capacity to reject
@@ -330,7 +474,17 @@ p. 183   CARRYING CAPACITY, LANGUAGE, "FARTHER INDIA"
     distinct: p. 175 is the political and mental break; this page is the
     rejection of the occupation's demographic justification.
 
-种族分布也反映自然环境。崎岖而密林覆盖的高地是低地之间的屏障。大陆尤其如此：南北走向的山脉使迁徙呈线状。在群岛，海是纽带而不是障碍，因此这里的沿海民族与内陆民族更接近同心圆格局。连续向东的种族迁徙都在本区留下痕迹，从丛林深处最古老、仍然可辨认的尼格利陀人，到最晚、也最占优势的蒙古人种。对战后世界更重要的是语言集团，因为它们是东南亚现有或正在形成的民族格局中的重要因素（图 5）。
+Racial distribution also reflects the natural environment. Rugged,
+heavily forested uplands are barriers between the lowlands. This is
+especially true on the mainland, where north-south ranges have forced
+migrations into linear paths. In the archipelago the sea has been a link
+rather than a barrier, so coastal and interior peoples form a pattern
+closer to concentric circles. Successive eastward migrations have all left
+traces, from the oldest recognizable element, the Negrito, in remote jungle
+retreats, to the latest and dominant group, the Mongoloid peoples. For the
+postwar world, language groups matter more, because they are an important
+factor in the nations that exist or are emerging in Southeast Asia
+(Figure 5).
 
     NOTE Q2 | two geographies, two obstacles to unity
     Mainland: mountains are barriers, so migrations are linear, and the
@@ -341,7 +495,19 @@ p. 183   CARRYING CAPACITY, LANGUAGE, "FARTHER INDIA"
     rule (p. 188). Question 2 is answered only when this page is joined to
     p. 188.
 
-伊洛瓦底江、湄南河、湄公河、红河这些彼此隔离的河谷，以及安南狭窄的沿海平原，分别是缅人、泰人、高棉人和安南人的迁徙路线、文化核心和政治要地。多次迁徙与文化冲击造成了高度复杂的局面。早期定居者或者被后来的集团吸收，或者被推进高地。孟-高棉诸民族现在作为碎片散布在整个外印度（Farther India）。他们对这一地区一度完整的控制，被缅人、泰人和安南人的侵入撕开。法属印度支那境内马来-波利尼西亚语族的大陆分支（占人及相关民族），如今缩小为安南中部山脉中的避难群体。最近的移民似乎是苗瑶诸部。他们在近几个世纪移入本区北部，大概是在汉族本身的压力之下。
+The separated valleys of the Irrawaddy, the Menam, the Mekong, and the Red
+River, and the narrow coastal plain of Annam, have been the migration
+routes, cultural cores, and political key areas of the Burmese, the Thai,
+the Cambodians, and the Annamese. Repeated migrations and cultural impacts
+have produced a highly complex situation. Earlier settlers were absorbed by
+later groups or pushed into the uplands. Mon-Khmer peoples now appear as
+fragments across Farther India. Their once solid hold on the region was
+torn apart by Burmese, Thai, and Annamese invasions. The mainland branch of
+the Malayo-Polynesian languages in French Indochina, the Cham and related
+peoples, survives as a much reduced group in the mountain refuge of the
+central Annamese range. The most recent immigrants appear to be the
+Miao-Yao tribes, who have moved into the northern part of the area over
+recent centuries, probably under pressure from the Chinese proper.
 
     NOTE PPT3 | "Farther India"; also NOTE Q4, the geographical base
     This is the sentence in which Broek uses "Farther India." Handout #3
@@ -352,7 +518,9 @@ p. 183   CARRYING CAPACITY, LANGUAGE, "FARTHER INDIA"
     related. They are not the same statement. The Miao-Yao movement under
     Chinese pressure is a migration fact, not a statement about Confucianism.
 
-与大陆的极端复杂相反，岛屿世界的基本语言面貌相当简单。这再次表明海的统一作用。（接 186 页）
+Against the extreme complexity of the mainland, the basic language pattern
+of the island world is fairly simple. That again shows the unifying work of
+the sea. Continued on p. 186.
 
 
 ------------------------------------------------------------------------
@@ -360,7 +528,14 @@ FIGURE 5   LANGUAGES (about pp. 184-185)
 FIGURE 6   RELIGIONS
 ------------------------------------------------------------------------
 
-图 5 是简化语言图。图例包括孟-高棉、缅-克伦、泰、安南、苗瑶、马来、占、巴布亚、安达曼，以及若干混合带。城市、种植园和矿区这些外来语言“岛屿”被省略。说明特别指出：仰光人口有一半是印度人，新加坡人口四分之三以上是华人。安达曼语与任何已知语言都没有亲缘关系，必须单列。占语一般被认为是马来语族的一支，其位置表明跨海迁徙。
+Figure 5 is a simplified language map. The legend includes Mon-Khmer,
+Burman-Karen, Thai, Annamese, Miao-Yao, Malay, Cham, Papuan, and Andamanese,
+plus several mixed zones. Cities, plantations, and mining areas, the small
+islands of immigrant languages, are omitted. The caption notes that half of
+Rangoon's population was Indian and more than three-fourths of Singapore's
+was Chinese. Andamanese has no known affinity with any other language and
+has to be shown separately. Cham is generally treated as a branch of the
+Malayan family, and its location indicates migration by sea.
 
     NOTE Q5 | the Chinese minority that blocks a Malaya-Indies union
     The Singapore figure is the demographic basis for the political
@@ -369,7 +544,20 @@ FIGURE 6   RELIGIONS
     When Question 5 asks for challenges, this caption is the evidence and
     p. 188 is the argument.
 
-图 6 的说明承认，本区大片地方的宗教资料缺乏或含糊，因为宗教本身难以精确定义。图例中的“中国宗教”是佛教、儒教与祖先崇拜的混合，它与万物有灵信仰的界线很难划定，大体上沿用了安南语的边界。其他宗教的边境同样存在过渡带。基督教传教区遍布东南亚，但在缅甸克伦人、印度支那山地部落和爪哇只是相对少数，故被省略。基督教在苏门答腊中北部的巴塔克人以及东部岛屿的原住民中势力强，甚至占优势。在后一地区，伊斯兰教仍在推进，但多在地方港口及其周围。巴厘是印度教的残留区。婆罗洲上原始宗教的界线与达雅克语的界线相当接近。
+The caption of Figure 6 admits that data on religion are lacking or vague
+over large parts of the region, because religion itself resists exact
+definition. What the legend calls Chinese religion is a mixture of
+Buddhism, Confucianism, and ancestor worship. The line between that mixture
+and animistic belief is hard to draw and has largely been made to follow
+the Annamese language boundary. Other religions also have transition zones
+along their frontiers. Christian missions exist all over Southeast Asia,
+but among the Karen of Burma, the hill tribes of Indochina, and on Java
+they are relatively small minorities and are omitted. Christianity is
+strong, or even predominant, among the Batak of north-central Sumatra and
+among primitive tribes of the eastern islands. In that eastern area Islam
+is still advancing, mostly in and around local ports. Bali is a relic area
+of Hinduism. On Borneo the boundary of primitive religion follows fairly
+closely the boundary of the Dyak languages.
 
     NOTE Q4 | PPT #4, p. 5 lists Hinduism, Confucianism, Buddhism, Islam,
              Christianity, and languages
@@ -384,11 +572,36 @@ FIGURE 6   RELIGIONS
 p. 186   INDIAN, CHINESE, AND ISLAMIC LAYERS
 ------------------------------------------------------------------------
 
-（承接 183 页）从马来半岛向北，包括福尔摩沙的一部分，向东包括摩鹿加（北哈马黑拉的“巴布亚语”除外），语言同属一个语系，即马来-波利尼西亚语族中所谓的马来语支。这一语支内部当然仍有大量语言。菲律宾至少有 60 种语言和方言。荷属东印度约有 25 种语言、250 种方言。
+Continued from p. 183. From the Malay Peninsula northward, including part
+of Formosa, and eastward through the Moluccas, except for northern
+Halmahera, which is Papuan in speech, the languages belong to one stock:
+the Malayan division of the Malayo-Polynesian family. Inside that division
+there are still many languages. The Philippines have at least 60 languages
+and dialects. The Netherlands Indies have about 25 languages and some 250
+dialects.
 
-今天在东南亚看到的社会拼布，只部分来自如今被视为土著的人群的迁徙。甚至可以说，倘若没有外部力量的冲击，他们之间的差别会小得多。先是更先进的东方文明，然后是西方世界。
+The social patchwork visible in Southeast Asia today comes only partly from
+the wanderings of peoples now counted as indigenous. The differences among
+them would be rather small had outside forces not struck them: first the
+more advanced civilizations of the Orient, later the Western world.
 
-在西方人找到通往热带亚洲的道路之前，这里许多个世纪一直是印度人和中国人的“殖民地区”。这意味着，一方面是牟利商人和索取贡赋的征服者的剥削，另一方面是文化上的丰富，或者直接来自积极传教，或者间接来自模仿与改编。尤其是公元初几个世纪的印度人扩张，把更高形式的宗教、哲学、文学、建筑以及政治与社会组织，带进了东南亚那些原始的、异教的部落社会。今天缅甸、泰国和巴厘的寺庙与宫殿，以及柬埔寨的吴哥、爪哇的婆罗浮屠这类古典纪念物，是来自印度的强大推动的象征。这些文化进展在低地相当强，在高地则弱而且迟缓。中国的文化影响总体上有限，但在法属印度支那沿海的安南人中间占优势。儒教、佛教和祖先崇拜以真正的中国方式混合在一起，安南宫廷和官僚制度清楚地带着中国传统的印记。
+Before Westerners found the way to tropical Asia, the region had for
+centuries been a colonial area for both Hindus and Chinese. That meant, as
+it still means, exploitation by profit-seeking merchants and by conquerors
+who wanted tribute, and also cultural enrichment, either by active
+proselytizing or by imitation and adaptation. Hindu expansion in the early
+centuries of the common era, in particular, brought higher forms of
+religion, philosophy, literature, and architecture, and higher forms of
+political and social organization, into tribal societies that had been
+primitive and pagan. The temples and palaces of present-day Burma,
+Thailand, and Bali, and classic monuments such as Angkor in Cambodia and
+Borobudur in Java, are symbols of that impulse from India. The cultural
+advance was fairly strong in the lowlands and weak and slow in the uplands.
+Chinese cultural influence was on the whole limited, but it predominates
+among the Annamese of the coastal area of French Indochina. Confucianism,
+Buddhism, and ancestor worship mingle there in a Chinese manner, and the
+Annam court and its mandarin bureaucracy clearly bear the stamp of Chinese
+tradition.
 
     NOTE Q4 | the main paragraph for Hinduism and Chinese traditions
     Hindu influence, in this article, is the early Indian expansion: higher
@@ -410,14 +623,40 @@ p. 186   INDIAN, CHINESE, AND ISLAMIC LAYERS
     Broek: 1860. The only job of the name Angkor inside this article is to
     stand as a symbol of Indian influence.
 
-大约在 14 世纪，另一股外部力量伊斯兰教产生影响。它的源头在近东，但这种新宗教及其附带的社会经济信条，是由印度西北部的穆斯林商人带到东印度的。它从贸易中心稳步传开……（接 187 页）
+About the fourteenth century another outside force, Islam, made its impact.
+Its source was the Near East, but the new religion and the social and
+economic tenets that came with it were carried to the Indies by Muslim
+merchants from northwestern India. It spread steadily from the trade
+centers. Continued on p. 187.
 
 
 ------------------------------------------------------------------------
 p. 187   THE LIMITS OF ISLAM, AND TRADE THAT TURNS ITS BACK
 ------------------------------------------------------------------------
 
-（承接 186 页）……从马六甲海峡沿岸向东、向北传播。葡萄牙人到达时，伊斯兰教已经在东印度的沿海地区占优势，并向北推进到棉兰老。伊斯兰教到来所引起的政治动荡，无疑便利了欧洲人的渗入，因为欧洲人可以让相争的派系互相争斗。更重要的是，欧洲人侵入之时伊斯兰教所达到的地理界限，在很大程度上解释了菲律宾人今天在东南亚的特殊位置。穆斯林几乎不受基督教传教活动影响，这是众所周知的。西班牙的殖民政策非常重视传播基督教，在菲律宾的万物有灵信仰人口中十分成功（偏远的山地部落除外），却从来不能使棉兰老、巴拉望和苏禄的穆斯林改宗。所谓摩洛人直到今天仍是菲律宾人之外的另一群人。这个穆斯林少数群体对自己在一个独立的菲律宾自治领中的未来地位，深怀疑虑。至于该国的其余部分，应当公道地说：正是西班牙人的改宗政策使菲律宾人西方化，从而造成了反抗西班牙的精神条件，并随后使美国统治下自治的迅速进展成为可能。那些批评荷属东印度或马来亚在政治或教育上“落后”的人，太常忘记这一点。棉兰老的哥打巴托和苏禄这两个摩洛省份，识字率是菲律宾最低的。10 岁以上人口平均约有 50% 能够读写，这两个省则是 20% 或更低。
+Continued from p. 186. Islam moved east and north from the trade centers
+along the Strait of Malacca. By the time the Portuguese arrived it was
+dominant on the coasts of the Indies and had pushed north as far as
+Mindanao. The political upheaval that came with Islam made European
+penetration easier, because Europeans could set contending factions against
+one another. More important, the geographical limit of Islam at the moment
+of the European invasion goes far to explain the peculiar position of
+Filipinos in Southeast Asia today. Muslims are virtually immune to
+Christian missionary work. Spanish colonial policy put heavy stress on
+spreading the Christian faith. It succeeded among the animist population of
+the Philippines, except for remote mountain tribes, and it never converted
+the Muslims of Mindanao, Palawan, and Sulu. The so-called Moros remain a
+group apart from other Filipinos, and this Muslim minority has grave doubts
+about its future place in an independent Philippine commonwealth. For the
+rest of the country, it should be said in fairness that Spanish conversion
+Westernized the Filipinos and thereby created the spiritual conditions of
+the revolt against Spain, and later made rapid progress in self-government
+under the American regime possible. Critics of what they call political or
+educational backwardness in the Indies or in Malaya forget this too often.
+In the Moro provinces of Cotabato, on Mindanao, and Sulu, literacy is the
+lowest in the Philippines. About 50 percent of the population over ten can
+read and write in the islands as a whole. In these two provinces the figure
+is 20 percent or less.
 
     NOTE Q4 | Islam's role in this article is a political boundary
     Islam spread from trade centers on the Strait of Malacca. Its carriers
@@ -435,7 +674,23 @@ p. 187   THE LIMITS OF ISLAM, AND TRADE THAT TURNS ITS BACK
     The footnote adds female literacy of 13.1 percent in Cotabato and
     16.1 percent in Sulu.
 
-西方殖民政策还有其他方面，倾向于加大东南亚各部分之间的对比。各国的贸易表明，区域内部的交换很少。确实存在的区内商业，或者是新加坡的转口，或者是从交趾支那、泰国和缅甸这些有余粮的低地，向英属马来亚和苏门答腊这类种植园经济的缺粮区运送稻米。法属印度支那和菲律宾由于保护主义政策，分别有一半到四分之三的贸易对着法国和美国。英属马来亚和荷属东印度对宗主国的依赖较轻，一部分是因为它们的产品有全世界的需求，一部分是因为长期的自由贸易传统。泰国处在任何帝国结构之外，贸易也更为分散，但同样主要对着中纬度的工业国。只有缅甸的主要市场和供应地近在身旁，那就是印度，印度占去缅甸贸易的一半以上。因此，东南亚各国的商业结构，同拉丁美洲那些生产原料的国家非常相似：它们面对世界，彼此以背相向。
+Other features of Western colonial policy have widened the contrasts among
+the parts of Southeast Asia. The trade of each country shows very little
+exchange inside the region. What intra-regional commerce there was consisted
+either of transshipment at Singapore or of rice shipped from the surplus
+lowlands of Cochinchina, Thailand, and Burma to food-deficit plantation
+economies such as British Malaya and Sumatra. Because of protectionist
+policies, French Indochina and the Philippines each did from one-half to
+three-fourths of their trade with France and the United States
+respectively. British Malaya and the Netherlands Indies were less dependent
+on the home country, partly because world demand for their products was
+wide and partly because of a long free-trade tradition. Thailand, outside
+any imperial structure, had more diversified trade, but that trade too was
+mainly with the industrial countries of the middle latitudes. Only Burma
+had its main market and source of supply close by: India took more than
+half of Burma's trade. The commercial structure of the Southeast Asian
+countries therefore resembles that of the raw-material countries of Latin
+America. They face the world and turn their backs on one another.
 
     NOTE Q3 | the central paragraph on the economic landscape
     Colonial rule shaped the economy by turning trade toward the metropole.
@@ -459,7 +714,19 @@ p. 187   THE LIMITS OF ISLAM, AND TRADE THAT TURNS ITS BACK
 p. 188   FIVE COLONIAL TEMPLATES, AND WHY FUSION FAILS
 ------------------------------------------------------------------------
 
-每一个殖民强国都按照本国的意识形态以及社会与经济实践，来统治、开发或剥削自己的帝国。美国人强调政治发展，法国人强调文化同化，英国人和荷兰人强调经济进步。前者更为自由放任，后者更为家长制。外来统治无疑在每一个附属地的内部造成了更大的统一。荷属东印度的众多民族开始感觉到一个印度尼西亚民族的纽带，半岛上的本地领袖展望一个统一的马来民族国家，都是因为西方统治下的统一，以及西方民族主义观念的渗入。与此同时，每一个附属地内部升起的民族意识，却加深了东南亚各政治单位之间的分裂。
+Each colonial power has ruled, developed, or exploited its empire according
+to the ideologies and the social and economic practices of the home
+country. The Americans have stressed political development, the French
+cultural assimilation, the British and the Dutch economic progress, the
+British in a more laissez-faire manner and the Dutch in a more paternal
+one. Foreign rule has certainly created greater unity inside each
+dependency. If the many peoples of the Netherlands Indies are beginning to
+feel the bonds of an Indonesian nation, and if local leaders on the
+Peninsula look toward a unified Malay national state, that is because of
+unification under Western rule and the penetration of Western ideas of
+nationalism. At the same time, the national consciousness rising inside
+each dependency sharpens the divisions among the political units of
+Southeast Asia.
 
     NOTE Q3 | PPT #4, p. 3: "national templates" and new ingredients
     The handout says metropolitan powers introduced industrial,
@@ -475,7 +742,19 @@ p. 188   FIVE COLONIAL TEMPLATES, AND WHY FUSION FAILS
     Colonial rule unified peoples inside each dependency and sharpened the
     lines between dependencies.
 
-半岛、东印度和菲律宾的马来民族有许多共同的基本文化特征，但是不同形式的殖民统治造成了不能忽视的分歧利益。正在急切等待独立的菲律宾人，会同意成为一个马来超级国家的一部分，尤其是倘若这个国家被置于国际监督之下，看来绝无可能。即便他们愿意，印度尼西亚人大半也会拒绝，因为他们会担心政治上更为先进的菲律宾人的权力，也会担心穆斯林与基督徒的利益发生摩擦。英属马来亚与荷属东印度的联合不会带来这两个特定问题，但是，当然还要先撇开荷兰或英国自己的反对，印度尼西亚人是否愿意再接收一块像英属马来亚那样数量可观、而且聚居的华人少数，同样是疑问。
+The Malay peoples of the Peninsula, the Indies, and the Philippines share
+many basic cultural traits, but different forms of colonial rule have
+created divergent interests that cannot be ignored. It seems out of the
+question that Filipinos, eagerly awaiting independence, would agree to
+become part of a Malayan superstate, especially one placed under
+international supervision. Even if they were willing, Indonesians would
+most likely reject the scheme. They would fear the power of the politically
+more advanced Filipinos, and they would fear friction between Muslim and
+Christian interests. A union of British Malaya and the Netherlands Indies
+would not raise those two particular problems. Quite apart from Dutch or
+British objections, it is doubtful whether Indonesians would welcome the
+addition of a Chinese minority as substantial and as concentrated as the
+one in British Malaya.
 
     NOTE Q5 | four concrete obstacles to a Malayan union
     Shared Malay culture is not enough. The obstacles are:
@@ -497,7 +776,18 @@ p. 188   FIVE COLONIAL TEMPLATES, AND WHY FUSION FAILS
 p. 189   THAILAND'S WARTIME GAINS; IS THE REGION STILL A UNIT?
 ------------------------------------------------------------------------
 
-在大陆上，通向合并的道路有类似的障碍。缅人、泰人和安南人的民族意识相对较强，根植于旧传统，又因抵抗西方支配而得到加强。日本奖赏泰国，把法属印度支那的一部分（老挝和柬埔寨）、英属马来亚的一部分（北部四邦）以及缅甸的一部分（南掸邦的一部分）给了它。并入老挝以及掸邦的部分领土，或许还有一些根据，因为当地居民对泰人的亲和，超过他们对泰国邻国人民的亲和。其余的添加则建立在从前宗主权的薄弱声称之上。几乎可以肯定，日本的这番慷慨受到泰国邻国的怨恨。无论未来的和会划出怎样的边界，这些边界都会造成恶感，并妨碍一个联邦内部的密切协作。
+On the mainland the path toward fusion meets similar hurdles. National
+consciousness among the Burmese, the Thai, and the Annamese is relatively
+strong. It is rooted in old traditions and strengthened by resistance to
+Western dominance. Japan rewarded Thailand with parts of French Indochina,
+in Laos and Cambodia, part of British Malaya, the four northern states, and
+part of Burma, in the Southern Shan States. The additions in Laos and in
+part of the Shan territory may have some basis, because the inhabitants
+show more affinity with the Thai than with the peoples of Thailand's
+neighbors. The other additions rest on tenuous claims of former suzerainty.
+There is little doubt that Thailand's neighbors resent this Japanese
+generosity. Whatever boundaries a future peace conference draws, they will
+cause ill feeling and hinder close collaboration inside a federation.
 
     NOTE Q1 and NOTE Q5 | the occupation's political legacy
     This is the interpretation of the transfers listed in the Figure 1
@@ -507,11 +797,23 @@ p. 189   THAILAND'S WARTIME GAINS; IS THE REGION STILL A UNIT?
     not only psychological. For Question 5, it is a challenge: a regional
     bloc would inherit wartime borders.
 
-区域问题
+REGIONAL PROBLEMS
 
-鉴于这些对比和彼此分歧的利益，人们很可以问：把东南亚当作一个区域单位来处理，究竟还有没有意义。回答是：尽管存在上面所说的一切差别，仍然有某些更广泛、意义更深远的考虑，使这个概念站得住。
+Given these contrasts and divergent interests, one may well ask whether
+there is any point in treating Southeast Asia as a regional unit. The
+answer is that, in spite of all the differences just noted, certain broader
+considerations of far-reaching significance still make the concept valid.
 
-首先是这个地区的“殖民”性格。近年来，越来越多的人接受这样一个论点：殖民强国不仅对自己所统治的殖民地区处于受托人的地位，而且对世界的其余部分负有一项道德义务，即说明自己的托管情形。对整个地区实行国际行政，既不实际，也不可取。但是，设立一个体现这种“第三方利益”的区域监督机构，却很有道理，至少在这一原则适用于世界上一切殖民地区的条件下是如此。按照这个思路，殖民强国在日本被逐出之后，将重新掌管各自的附属地，但必须对一个国际当局负责。
+The first is the colonial character of the region. In recent years there
+has been growing acceptance of the view that colonial powers are trustees
+for the areas they rule and also owe the rest of the world a moral duty to
+account for their stewardship. International administration over the whole
+region is neither practical nor desirable. There is much to be said,
+however, for a regional supervisory organ that would embody this
+third-party interest, at least if the same principle is applied to all
+colonial areas in the world. On that line of thought, after Japan is
+expelled the colonial powers would resume charge of their respective
+dependencies, but they would be accountable to an international authority.
 
     NOTE Q5 | his postwar sequence is not the handout's sequence
     Handout #4, p. 4, sketches a rapid shift "from Western powers to
@@ -524,14 +826,34 @@ p. 189   THAILAND'S WARTIME GAINS; IS THE REGION STILL A UNIT?
     "trusteeship / third-party interest" sentence is the Institute of
     Pacific Relations conference at Mont Tremblant, December 1942.
 
-这个国际机构的职能，却不应当仅仅限于监督走向自治的进展。政治权利若没有健全的社会与经济基础，就没有意义。外部强国倘若本着大西洋宪章的精神，希望参与附属地的政治发展，也就必须承担这些地方物质福利的一份责任。倘若美国的舆论可以要求在马来亚建立充分的民主，同时又否认自己关心该国的经济状况，那会是很奇怪的事情。这就把东南亚的经济前途问题提到了首要位置。
+The function of that international body should not be limited to
+supervising progress toward self-government. Political rights mean little
+unless they rest on a sound social and economic foundation. If outside
+powers, in the spirit of the Atlantic Charter, want a part in the political
+development of the dependencies, they must also accept a share of
+responsibility for the material welfare of those lands. It would be strange
+if public opinion in the United States could demand full democracy in
+Malaya and at the same time disclaim any concern for economic conditions
+there. That raises the economic future of Southeast Asia to first
+importance.
 
 
 ------------------------------------------------------------------------
 p. 190   THE RAW-MATERIAL EXPORT ECONOMY
 ------------------------------------------------------------------------
 
-过去，从田地、森林和矿山获得的商品出口，提供了支付各种改良费用的岁入。农民社会天然缺少资本。西方人的投资，以及程度较轻的中国人和印度人的投资（印度人主要在缅甸），无疑对投资者自己有利。但是本地人民总体上也有所得。他们得到的不只是更好的就业机会，尤其是道路、港口、水利工程、医院、试验站和其他持久的改良。本地人民是否得到了利润中公平的一份，如果没有，战后又应当如何纠正，当然存在不同意见。尽管如此，生活条件的改善仍将主要依赖资本、设备和服务的输入。东南亚还能否以传统方式为这些必需品付款？
+In the past, exports of commodities taken from field, forest, and mine
+provided the revenue that paid for improvements. A peasant society is
+naturally poor in capital. Investment by Westerners, and to a smaller
+extent by Chinese and by Indians, the latter mainly in Burma, has certainly
+been profitable to the investors. Local peoples have also gained on the
+whole, not only through better chances of employment but especially through
+roads, ports, waterworks, hospitals, experiment stations, and other durable
+improvements. There is of course disagreement about whether local peoples
+received a fair share of the profits and, if not, how that should be
+corrected after the war. Even so, improvement in living conditions will
+still depend largely on imports of capital, equipment, and services. Can
+Southeast Asia pay for those necessities in the traditional way?
 
     NOTE Q3 | who built the landscape, and who is still required
     The visible economic landscape, roads, ports, waterworks, hospitals,
@@ -542,7 +864,20 @@ p. 190   THE RAW-MATERIAL EXPORT ECONOMY
     equipment, and services. That conclusion is why p. 176 says economic
     dependence survives political freedom.
 
-我们现在痛苦地意识到，东南亚已经被开发成一座真正的原料宝库。它出产全世界几乎全部的天然橡胶、金鸡纳皮、马尼拉麻、木棉、柚木和胡椒，四分之三的干椰肉和木薯粉，一半以上的棕榈油和锡，三分之一的龙舌兰纤维（剑麻与赫纳昆麻）。天然树脂、树胶和精油也非常重要。例如，嚼胶原料节路顿大部分来自这里，香茅油有四分之三来自这里。另一种看似次要、其实极为重要的产品是用途广泛的杀虫剂鱼藤酮。它的产量在过去十年迅速扩大，英属马来亚和荷属东印度几乎垄断了世界市场。此外，东南亚还生产相当数量的蔗糖（占世界产量的 14%）、茶（18%）、烟草、香料，以及钨这类稀有金属（22%）。这些百分比指的是 1938 或 1939 年。
+It is now painfully clear that Southeast Asia had been developed into a
+veritable treasure house of raw materials. It produced almost all of the
+world's natural rubber, cinchona bark, Manila hemp, kapok, teak, and
+pepper; three-fourths of the copra and tapioca flour; more than half of the
+palm oil and the tin; and one-third of the agave fibers, sisal and
+henequen. Natural resins, gums, and essential oils were also important. Most
+of the jelutong used in chewing gum, and three-fourths of the citronella
+oil, came from here. Another product, seemingly minor and in fact highly
+important, was the versatile insecticide rotenone. Its output expanded
+rapidly over the previous ten years, and British Malaya and the Netherlands
+Indies held almost a monopoly of the world market. The region also produced
+considerable quantities of cane sugar, 14 percent of world output, tea,
+18 percent, tobacco, spices, and rare metals such as tungsten, 22 percent.
+The percentages refer to 1938 or 1939.
 
     NOTE PPT3 | the spice blanks are not in this list
     The article's list is rubber, cinchona, abaca, kapok, teak, pepper,
@@ -553,7 +888,34 @@ p. 190   THE RAW-MATERIAL EXPORT ECONOMY
     them: cloves in the first blank; nutmeg and mace in the second. The
     handout itself defines mace as the reddish aril around the nutmeg seed.
 
-大约从 19 世纪中叶以来，东南亚经历了非凡的经济发展。拉丁美洲的经济因为奴隶制的废除和政府的不稳定而停滞时，殖民统治下的东南亚因为苏伊士运河而离欧洲更近，成为西方工业巨大的热带供应中心。这个首要地位现在从两个方向受到严重威胁。备战以及战争本身，促使工业国发展出合成替代品，也促使印度、非洲，尤其是南美洲的热带地区引进或扩大天然产品的生产。这些事业不会全部成功。但是只要其中一部分在战后存留下来，就意味着东南亚面临可观的竞争。竞争将不只是价格与质量。在价格与质量上，热带亚洲总体上可能更强。竞争还会卷入政治考虑和国家考虑。依赖遥远国家供应战略原料是危险的，这个教训可能使欧洲和美洲不惜代价维持本国的合成品生产。新工业中的大笔资本肯定会支持这种政策。仅美国的合成橡胶就约有 6.25 亿美元。又例如，对拉丁美洲的“睦邻政策”可能促使美国优先购买那个地区新出现或重新恢复的产品。在其他国家扩大销路，可以部分弥补别处的损失。例如，如果中国被扶持起来，运输系统和工业得到发展，消费能力提高，中国就可能成为橡胶、纤维、工业油脂和食品的重要客户。即便如此，仍然很难看出东南亚如何恢复从前的出口量。对社会经济结构的冲击将是严重的，除非较先进的国家承认：它们的责任多于对政治理想表示同情。
+Since about the middle of the nineteenth century, Southeast Asia has gone
+through an extraordinary economic development. While the economy of Latin
+America stagnated because slavery was abolished and governments were
+unstable, colonial Southeast Asia, brought closer to Europe by the Suez
+Canal, became the great tropical supply center for Western industry. That
+paramount position is now seriously threatened from two directions.
+Preparation for war, and the war itself, led industrial countries to
+develop synthetic substitutes and led the tropical parts of India, Africa,
+and especially South America to introduce or expand natural production. Not
+all of these ventures will succeed. If even a part of them survive the war,
+Southeast Asia faces considerable competition. The competition will not be
+only a matter of price and quality, on which tropical Asia might on the
+whole be stronger. It will also involve political and national
+considerations. The lesson that it is dangerous to rely on distant
+countries for strategic raw materials may lead Europe and America to
+maintain home production of synthetics at whatever cost. The large capital
+sunk in the new industries will support that policy. Synthetic rubber in
+the United States alone represents about 625 million dollars. The
+good-neighbor policy toward Latin America might also induce the United
+States to prefer the new or revived products of that region. Wider outlets
+elsewhere can make up part of the loss. If China is helped to its feet, and
+if its transport and industry develop so that consuming power rises, China
+may become a substantial customer for rubber, fibers, industrial fats and
+oils, and foodstuffs. Even then it is hard to see how Southeast Asia can
+regain its former export volume. The shock to the social and economic
+structure will be severe, unless the more advanced nations recognize that
+their responsibility is greater than an expression of sympathy with
+political ideals.
 
     NOTE Q1 and NOTE Q3 | the economic damage is wider than occupation
     The war threatens Southeast Asia's export role in two ways: synthetic
@@ -570,13 +932,45 @@ p. 190   THE RAW-MATERIAL EXPORT ECONOMY
 pp. 191-192   NEW OPPORTUNITIES
 ------------------------------------------------------------------------
 
-未来要求一种新的做法。现在就制订任何具体的长期计划都为时过早，而且东南亚各国的问题本来就不同。不过，几条简短的建议可以说明可能的方向。
+The future requires a new approach. It is too early to draw up any specific
+long-range plan, and the problems differ from country to country. A few
+brief suggestions can show the possible directions.
 
-出口的衰落，如果用一种建设性的再调整政策来应对，在一定程度上也许是塞翁失马。把重点从少数出口商品转向更加多样的农业，会增强萧条年份的经济抵抗力。1930 年代初的灾难时期留下了惨痛教训，也发生过一些有益的变化，但是同战后所需要的变化相比，那些变化仍然很小。英属马来亚尤其需要更多自己生产的粮食。在正常年份，它大约三分之二的大米消费依赖进口。
+If a constructive policy of readjustment meets it, the decline of exports
+may to some extent be a blessing in disguise. A shift of emphasis from a
+few export commodities to a more diversified agriculture would increase
+economic resistance in years of depression. The disastrous early 1930s
+taught a hard lesson, and some useful changes did occur, but they were
+small beside what the postwar period will require. British Malaya in
+particular needs to grow more of its own food. In a normal year it imported
+about two-thirds of the rice it consumed.
 
-长期重建的另一项是重新定居。目的或者是缓解过度拥挤地区的人口压力，或者是为那些陷入萧条的出口产业中的工人提供新的生计。此前十年，已经有过大力推动爪哇人迁往苏门答腊、吕宋人迁往棉兰老的努力。最初的结果给了人希望，但规模太小，还提供不了实质性的缓解。这项工作必须以大得多的规模恢复。爪哇外迁的殖民者人数从 1937 年的约 2 万人升到 1940 年的约 5.3 万人。菲律宾全国土地定居局报告，1939 和 1940 年有 1.15 万人在棉兰老定居。
+Another item in a long-range reconstruction is resettlement, either to
+relieve population pressure in overcrowded areas or to give a new
+livelihood to workers in depressed export industries. In the preceding
+decade there were energetic efforts to move people from Java to Sumatra and
+from Luzon to Mindanao. The first results were promising and still too
+small to give any material relief. The work will have to be resumed on a
+much larger scale. The number of colonists leaving Java rose from about
+20,000 in 1937 to about 53,000 in 1940. In the Philippines, the National
+Land Settlement Administration reported that 11,500 persons were settled in
+Mindanao in 1939 and 1940.
 
-发展制造业是另一条改善之路，而且比重新定居方案下扩展自给农业更有刺激性。倘若萎缩的出口市场拿不出足够的钱到国外购买制成品，制造业还会成为必要。1930 年代的爪哇在一项社会政策下鼓励小型工厂生产日用品，所取得的成绩是未来的路标。除爪哇以外，吕宋中部、下东京，以及可能还有仰光、曼谷和新加坡周围，都很可以成为消费品工业的中心，按照东方的价格水平出售。这种活动接着会引出更基础的工业，爪哇的经验已经表明了这一点。这类工业中心也将供应外围的农业地区，从而产生更密切的贸易关系。荷属东印度已经看得出来：在工厂生产扩大的刺激下，爪哇向其他岛屿出口制成品的价值，从 1934 年的 3400 万盾上升到 1940 年的 7000 万盾。
+The development of manufacturing is another road to improvement, and a more
+stimulating one than the spread of subsistence agriculture under
+resettlement schemes. It will also be a necessity if shrunken export
+markets do not provide enough money to buy manufactured goods abroad. The
+results obtained on Java in the 1930s, under a social policy that
+encouraged small factories making daily necessities, are guideposts. Besides
+Java, central Luzon, lower Tongking, and possibly the districts around
+Rangoon, Bangkok, and Singapore may become centers of consumer-goods
+industries, selling at an Oriental price level. That activity in turn
+induces more basic industries, as Java's experience has already shown.
+Such industrial centers will also supply the outlying agrarian regions, and
+closer trade relations will result. This was already visible in the
+Netherlands Indies. Under the stimulus of expanding factory production, the
+value of Java's exports of manufactured goods to the other islands rose
+from 34 million guilders in 1934 to 70 million in 1940.
 
     NOTE Q5 | the benefit inside the region, before the institutions
     These three proposals are the economic program a bloc would coordinate:
@@ -586,18 +980,47 @@ pp. 191-192   NEW OPPORTUNITIES
     70 million in 1940, is his one measured example of trade beginning to
     face inward. It answers the "backs turned" image on p. 187.
 
-东南亚会不会发展重工业，目前仍是一个学院式的问题。不能仅仅因为本区几乎没有冶金用煤、铁矿也相对较少，就否定这种可能。早期工业革命的这两项要素，随着技术进步正变得不那么重要。由于雨量大、地形起伏强，东南亚拥有可观的水电潜力。合金和塑料将来必定比过去扮演大得多的角色。本区有锡、铝、铬、锰、钨等许多金属，还有巨大的森林储备。这些森林有朝一日会成为各种木质塑料的原料。
+Whether Southeast Asia will develop a heavy industry is still an academic
+question. The possibility cannot be dismissed merely because the region has
+little or no metallurgical coal and relatively small iron deposits. Those
+twin elements of the early Industrial Revolution are becoming less
+important as technology advances. Heavy rainfall and strong relief give
+Southeast Asia considerable potential water power. Metal alloys and
+plastics are bound to play a much larger role than in the past. The region
+has many metals, including tin, aluminum, chromium, manganese, and
+tungsten, and enormous forest reserves that may one day supply the raw
+material for wood plastics.
 
-工业化以及随之而来的社会经济组织的变化，会倾向于降低出生率，正如其他国家已经发生的那样。只有通过这个过程，才有希望打破那个恶性循环：生活水平的上升被更多存活下来的人口所抵消。
+Industrialization, and the changes in social and economic organization that
+come with it, will tend to lower the birth rate, as has happened in other
+countries. Only by that process can one hope to break the vicious circle in
+which a rise in living standards is cancelled by the survival of more
+people.
 
-制造业的发展将再次主要依赖西方国家提供资本、设备和技术援助。这看起来像是在邀请今天的工业国自断生路。可是经验已经表明，工业国之间的贸易流，大于工业国与原料生产国之间的贸易流。
+The growth of manufacturing will again depend largely on Western nations
+for capital, equipment, and technical assistance. This may look like an
+invitation to the present industrial countries to cut their own throats.
+Experience has shown, however, that the flow of trade among industrial
+countries is greater than the flow between industrial countries and
+producers of raw materials.
 
 
 ------------------------------------------------------------------------
 p. 193   TOWARD A REGIONAL BLOC
 ------------------------------------------------------------------------
 
-东南亚因此仍将依赖西方国家。但是本区人民可以通过区域协作，加强并加快走向经济自决的进程。战争刚刚结束就做政治上和领土上的合并，如上文已经讨论过的那样，弊大于利。一个沿着功能路线工作的区域集团，却是一种清楚的可能。即便一个国际殖民当局不能实现，也可以建立一个纯粹区域性的协商与协调组织。新近创立的英美加勒比委员会，就是这种区域协作的例子。若干委员会应当在一个秘书处之下工作，秘书处充当区域的交换中心。它们应当审查整个区域的问题，也审查区域内部的摩擦来源。
+Southeast Asia will thus remain dependent on Western countries. The peoples
+of the region can nevertheless strengthen and speed their progress toward
+economic self-determination by regional collaboration. A political and
+territorial fusion immediately after the war would, as already argued, do
+more harm than good. A regional bloc working along functional lines is a
+distinct possibility. Even if an international colonial authority does not
+appear, a purely regional organization for consultation and coordination
+could be set up. The recently created Anglo-American Caribbean Commission
+is an example of that kind of collaboration. A number of committees should
+work under a secretariat that serves as the regional clearinghouse. They
+should examine the problems of the region as a whole and the sources of
+friction inside it.
 
     NOTE Q5 | the sentence that defines the bloc he wants
     Immediate political and territorial fusion would do more harm than good.
@@ -616,7 +1039,15 @@ p. 193   TOWARD A REGIONAL BLOC
     stops there. His 1944 body still assumes colonial powers under
     supervision. ASEAN's 1967 body is an association of independent states.
 
-例如，原料问题显然只能由全世界的协定来解决，但是热带亚洲各国若能采取联合立场，就会大大加强它们在会议桌上的地位。其他需要讨论、并且在可行时采取共同政策的区域议题，是移民的管制、劳动条件、区域内的航运和航空。此外，教育、公共卫生、营养、重新定居、农村信贷、农业方法和工业发展这些方面的信息，应当定期交换，以便促进有效福利政策的迅速传播。
+The problem of raw materials, for example, can obviously be solved only by
+worldwide agreements, but a united stand by the countries of tropical Asia
+would considerably strengthen their position at the conference table. Other
+regional topics that need discussion, and a common policy where that is
+feasible, are the regulation of immigration, labor conditions,
+intra-regional shipping, and aviation. There should also be a regular
+exchange of information on education, public hygiene, nutrition,
+resettlement, rural credit, agricultural methods, and industrial
+development, so that effective welfare policies spread quickly.
 
     NOTE Q5 | the benefit list, in his order
     1. A united stand on raw materials at world conferences.
@@ -633,7 +1064,27 @@ p. 193   TOWARD A REGIONAL BLOC
 p. 194   LOCATIONAL UNITY
 ------------------------------------------------------------------------
 
-这种利益共同体的想法，无论从内部看还是从外部看，也出现在东南亚作为一种过境区域的性格之中。这一点对马来群岛以及相邻的半岛来说，早就得到承认。这些横跨赤道的土地，既是守卫太平洋与印度洋之间门户的屏障，同时又是亚洲与澳大利亚之间的踏脚石。马来世界同世界航运的另外两个瓶颈，即带有巴拿马运河的加勒比、带有苏伊士运河的地中海，共同构成世界海权所依靠的三个战略通道。法属印度支那和菲律宾侧翼于南中国海，守卫通往马六甲海峡和巽他海峡的门户。泰国既濒临太平洋，也濒临印度洋，并且控制克拉地峡，也就是连接两大洋的潜在运河所在。近年来，缅甸作为中国与印度洋之间的过境地带兴起，进一步加强了东南亚的这一战略位置。空运在战后肯定会扮演重要角色，但不会取代陆运和海运。未来的空中航线系统看来甚至会加强东南亚作为十字路口的位置。从美国太平洋岸经日本到华东、菲律宾和新加坡的大圆航线，在这里与经由夏威夷的跨太平洋“跳岛”航线相遇，也与从澳大利亚到印度、再前往西亚和欧洲的航线相遇。
+This idea of a community of interests, seen from inside or from outside,
+also appears in Southeast Asia's character as a transit region. That has
+long been recognized for the Malay Archipelago and the adjacent peninsula.
+These lands astride the equator are at once a barrier guarding the gateway
+between the Pacific and Indian Oceans and a line of stepping stones between
+Asia and Australia. Together with the other two bottlenecks of world
+shipping, the Caribbean with the Panama Canal and the Mediterranean with
+the Suez Canal, the Malay world forms the trinity of strategic thoroughfares
+on which world sea power rests. French Indochina and the Philippines flank
+the South China Sea and guard the approaches to the Strait of Malacca and
+the Sunda Strait. Thailand borders both the Pacific and the Indian Ocean
+and controls the Isthmus of Kra, the potential site of a canal linking the
+two oceans. In recent years the rise of Burma as a transit zone between
+China and the Indian Ocean has reinforced this strategic position. Air
+transport will certainly play a large role after the war. It will not
+replace transport by land and sea. The future system of skyways is likely
+even to accentuate Southeast Asia's place as a crossroads. The great-circle
+route from the Pacific coast of America via Japan to eastern China, the
+Philippines, and Singapore meets here the transpacific island-hopping line
+via Hawaii, and also the route from Australia to India and onward to West
+Asia and Europe.
 
     NOTE PPT3 | "The Malay Archipelago"
     This is where Broek uses the name. He uses it for a strategic
@@ -643,7 +1094,13 @@ p. 194   LOCATIONAL UNITY
     title page of Alfred Russel Wallace's The Malay Archipelago (1869) and
     with Mouhot's travel book. Wallace is not in the article.
 
-这些功能使东南亚在世界的循环系统中占有紧要位置，并使它的安全成为国际关切的事项。在这方面，本区没有任何一个部分可以同整体分开。当日本渗入法属印度支那时，东南亚西方支配的整个结构就已经注定要垮掉。同样，一旦日本被从缅甸、苏门答腊或菲律宾群岛赶出去，它整个新赢得的帝国就会开始崩溃。
+These functions give Southeast Asia a vital place in the world's
+circulatory system and make its security a matter of international concern.
+In this respect no part of the region can be separated from the whole. When
+Japan penetrated French Indochina, the entire structure of Western
+domination in Southeast Asia was doomed. In the same way, once Japan is
+expelled from Burma, from Sumatra, or from the Philippine Islands, its
+whole newly won empire will start to crumble.
 
     NOTE Q1 | strategic impact of the occupation
     French Indochina is the first domino. One entry point compromised the
@@ -658,9 +1115,27 @@ p. 194   LOCATIONAL UNITY
 p. 195   SIX STATES, AN "ASIATIC BALKANS," INTERDEPENDENCE
 ------------------------------------------------------------------------
 
-这种战略上的相互依存，对于正在接近自治阶段的东南亚人民的命运，有着更直接的关系。历史发展清楚地指向：本区最终将出现至少六个民族国家。它们的侧翼是澳大利亚、印度和中国，北面则是日本。日本尽管战败，仍可能是一个潜在的、可畏的国家。如果暂时搁下日本未来权力这个问题，并且略去澳大利亚，因为按人口它其实是一个小国，而且远离大多数东南亚国家，那么东南亚与其近邻之间的对比就会更强。
+This strategic interdependence bears even more directly on the fate of the
+peoples of Southeast Asia as they approach self-rule. Historical
+development points clearly to the eventual emergence of at least six
+national states in the region. They will be flanked by Australia, India,
+and China, and to the north by Japan, which despite defeat may remain a
+potentially formidable nation. If one leaves open for the moment the
+question of Japan's future power, and sets Australia aside because in
+population it is a small nation and remote from most of the Southeast Asian
+countries, the contrast between Southeast Asia and its immediate neighbors
+becomes even sharper.
 
-于是出现这样一个想法：东南亚碎裂成六个或者更多的单独国家，可能造成一个“亚洲巴尔干”，注定在其巨大邻国最终争夺政治或经济优势的时候成为棋子。对这种不测事件的推测，很难成为建立区域集团的有力论据。然而我们已经看到，还有其他而且紧迫的问题需要区域性的解决。在殖民解放、安全和福利这些具体问题上进行合作，可以逐渐建立起一种超越地方分歧的统一感。正是通过这种走向相互依存的有机演进，东南亚才会变得足够强大，能够挡开外部压力，并获得真正的自由。
+The thought then arises that the fragmentation of Southeast Asia into six
+or more separate states may create an Asiatic Balkans, destined to become a
+pawn in an eventual struggle for political or economic supremacy among its
+great neighbors. Speculation of that kind can hardly be a compelling
+argument for a regional bloc. There are, however, other and urgent problems
+that require a regional solution. Cooperation on the concrete questions of
+colonial emancipation, security, and welfare may gradually establish a
+sense of unity that rises above local divergences. Through that organic
+evolution toward interdependence, Southeast Asia can become strong enough
+to ward off outside pressure and to gain genuine freedom.
 
     NOTE Q5 | benefits he is willing to claim, and the one he discounts
     He discounts the "Asiatic Balkans" fear as a compelling argument by
@@ -673,9 +1148,17 @@ p. 195   SIX STATES, AN "ASIATIC BALKANS," INTERDEPENDENCE
     (Vietnam), British Malaya, the Netherlands Indies, and the Philippines.
     Cambodia and Laos are treated as weaker cores, not as two more of the six.
 
-民族主权国家这个概念，本质上是欧洲文化的产物。没有人会否认蓬勃的民族生活具有激发作用，但是也没有人能看不见，民族主义的无政府状态造成了怎样的混乱。当西方世界正在寻找逃离这一僵局的出路时，热带亚洲正在挣扎着走向民族自决。
+The concept of the national sovereign state is essentially a product of
+European culture. No one will deny the stimulating quality of a vigorous
+national life. No one can fail to see the chaos caused by nationalistic
+anarchy. While the Western world searches for a way out of that impasse,
+tropical Asia is struggling toward national self-determination.
 
-这些人民是否必须走欧洲曾经走过的同一条路，还是能够使爱国主义从属于集体的区域利益？如果西方国家承认自己真正的责任，那么现在似乎还不太晚，可以把东南亚引向这样一个未来：在那里，“相互依存”将成为一个与今天的“独立”同样富有挑战性的词。
+Must these peoples travel the same road Europe traveled, or can they
+subordinate patriotism to collective regional interests? If the Western
+nations recognize their true responsibility, it seems not yet too late to
+guide Southeast Asia toward a future in which interdependence will be as
+challenging a word as independence is today.
 
     NOTE Q5 | the title, stated as a choice
     Diversity is real, and he has spent the middle of the article proving
