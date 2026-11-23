@@ -1,10 +1,4 @@
-/*
- * Name:        L4T2v530013020.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun
- * Description: This program reads two characters and prints the difference of their ASCII codes.
- */
+/* Name: L4T2v530013020.c Author: Li Yanjun Version: 1.0 Copyright: Copyright (c) 2026 Li Yanjun Description: This program reads two characters and prints the difference of their ASCII codes. */
 
 #include <stdio.h>
 

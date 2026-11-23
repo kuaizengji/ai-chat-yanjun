@@ -1,10 +1,4 @@
-/*
- * Name:        L4T4v530013020.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun
- * Description: This program recursively counts how many times m divides n.
- */
+/* Name: L4T4v530013020.c Author: Li Yanjun Version: 1.0 Copyright: Copyright (c) 2026 Li Yanjun Description: This program recursively counts how many times m divides n. */
 
 #include <stdio.h>
 

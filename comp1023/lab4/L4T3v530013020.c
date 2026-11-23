@@ -1,10 +1,4 @@
-/*
- * Name:        L4T3v530013020.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun
- * Description: This program uses recursion to calculate the sum of squares from 1 through n.
- */
+/* Name: L4T3v530013020.c Author: Li Yanjun Version: 1.0 Copyright: Copyright (c) 2026 Li Yanjun Description: This program uses recursion to calculate the sum of squares from 1 through n. */
 
 #include <stdio.h>
 

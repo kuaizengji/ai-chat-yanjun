@@ -1,10 +1,4 @@
-/*
- * Name:        L4T1v530013020.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun
- * Description: This program reads a positive integer and prints its square root, base-10 log, and natural log.
- */
+/* Name: L4T1v530013020.c Author: Li Yanjun Version: 1.0 Copyright: Copyright (c) 2026 Li Yanjun Description: This program reads a positive integer and prints its square root, base-10 log, and natural log. */
 
 #include <stdio.h>
 #include <math.h>

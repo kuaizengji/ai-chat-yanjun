@@ -1,10 +1,4 @@
-/*
- * Name:        L4T5v530013020.c
- * Author:      Li Yanjun
- * Version:     1.0
- * Copyright:   Copyright (c) 2026 Li Yanjun
- * Description: This program calculates m to the power n with one recursive function and one loop.
- */
+/* Name: L4T5v530013020.c Author: Li Yanjun Version: 1.0 Copyright: Copyright (c) 2026 Li Yanjun Description: This program calculates m to the power n with one recursive function and one loop. */
 
 #include <stdio.h>
 
