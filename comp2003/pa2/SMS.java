@@ -115,13 +115,14 @@ public class SMS {
         if (line.equals("e")) {
             return "Goodbye!";
         }
-        int space = line.indexOf(' ');
-        if (space < 0) {
+        // Any whitespace may separate the command name from its argument.
+        String[] head = line.split("\\s+", 2);
+        if (head.length < 2) {
             throw new IllegalArgumentException("Invalid command");
         }
         // Split the command name once so spaces inside department names remain intact.
-        String command = line.substring(0, space);
-        String argument = line.substring(space + 1).trim();
+        String command = head[0];
+        String argument = head[1].trim();
         // Reject a duplicate ID before either creating a grade or appending a record.
         if (command.equals("i")) {
             Employee employee = parseEmployee(argument);
@@ -220,24 +221,43 @@ public class SMS {
             move(node, selected, increment);
             return "Adjusted salary for the employee with ID " + id + " by " + increment + " dollars";
         }
-        // An emptied grade stays in the tree. Only command a deletes a salary key.
+        // Removing the last record retires that salary key. Adjustment still keeps it.
         if (command.equals("rId")) {
             int id = Integer.parseInt(parts[1]);
-            Employee employee = employeeAt(node, id);
-            if (employee == null) {
+            ArrayList<Employee> records = node.getRecords();
+            int index = -1;
+            for (int i = 0; i < records.size(); i++) {
+                if (records.get(i).getId() == id) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index < 0) {
                 return "Failed to remove: No such employee with ID " + id + " or no records in salary grade " + salary;
             }
-            node.getRecords().remove(employee);
+            records.remove(index);
+            if (records.isEmpty()) {
+                tree.deleteNode(salary);
+            }
             return "Successfully removed: Employee with ID " + id + " in salary grade " + salary;
         }
         // Department removal is restricted to the salary specified in this command.
         if (command.equals("rDept")) {
             String department = parts[1];
-            ArrayList<Employee> selected = select(node, department);
-            if (selected.isEmpty()) {
+            ArrayList<Employee> records = node.getRecords();
+            boolean found = false;
+            for (int i = records.size() - 1; i >= 0; i--) {
+                if (records.get(i).getDepartment().equals(department)) {
+                    records.remove(i);
+                    found = true;
+                }
+            }
+            if (!found) {
                 return "Failed to remove: No employees from " + department + " in salary grade " + salary;
             }
-            node.getRecords().removeAll(selected);
+            if (records.isEmpty()) {
+                tree.deleteNode(salary);
+            }
             return "Successfully removed: Employees from " + department + " in salary grade " + salary;
         }
         throw new IllegalArgumentException("Invalid command");
