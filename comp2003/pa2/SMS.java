@@ -72,9 +72,10 @@ public class SMS {
                             fields[3], Integer.parseInt(fields[4]));
     }
 
-    // Query and removal commands use distinct failure prefixes from the handout.
+    // Removal is the only missing-grade message that ends with an exclamation mark.
     private String missingGrade(String action, int salary) {
-        return "Failed to " + action + ": Salary grade " + salary + " not found";
+        String ending = action.equals("remove") ? "not found!" : "not found";
+        return "Failed to " + action + ": Salary grade " + salary + " " + ending;
     }
 
     // Drop one ID from this bucket. The caller retires the grade when it becomes empty.
@@ -89,17 +90,7 @@ public class SMS {
         return false;
     }
 
-    // Department removal starts only when the named grade actually has that department.
-    private boolean departmentPresent(Node node, String department) {
-        for (Employee employee : node.getRecords()) {
-            if (employee.getDepartment().equals(department)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    // Remove every matching record and report whether this bucket changed.
+    // Remove every matching record in this grade and report whether any were removed.
     private boolean stripDepartment(Node node, String department) {
         ArrayList<Employee> records = node.getRecords();
         boolean removed = false;
@@ -110,16 +101,6 @@ public class SMS {
             }
         }
         return removed;
-    }
-
-    // Snapshot keys first so deleting an emptied grade cannot skip its siblings.
-    private void collectKeys(Node node, ArrayList<Integer> keys) {
-        if (node == null) {
-            return;
-        }
-        collectKeys(node.getLeft(), keys);
-        keys.add(node.getKey());
-        collectKeys(node.getRight(), keys);
     }
 
     // ID lookup scans only the selected salary bucket.
@@ -270,42 +251,25 @@ public class SMS {
             move(node, selected, increment);
             return "Adjusted salary for the employee with ID " + id + " by " + increment + " dollars";
         }
-        // The handout success line reports the grade that actually held the employee.
+        // Removal stays inside the salary named by this command.
         if (command.equals("rId")) {
             int id = Integer.parseInt(parts[1]);
-            if (removeIdAt(node, id)) {
-                if (node.getRecords().isEmpty()) {
-                    tree.deleteNode(salary);
-                }
-                return "Successfully removed: Employee with ID " + id + " in salary grade " + salary;
+            if (!removeIdAt(node, id)) {
+                return "Failed to remove: No such employee with ID " + id + " or no records in salary grade " + salary;
             }
-            Employee elsewhere = tree.findEmployee(id);
-            if (elsewhere != null) {
-                int realSalary = elsewhere.getSalary();
-                Node home = tree.findNode(realSalary);
-                if (home != null && removeIdAt(home, id) && home.getRecords().isEmpty()) {
-                    tree.deleteNode(realSalary);
-                }
-                return "Successfully removed: Employee with ID " + id + " in salary grade " + realSalary;
+            if (node.getRecords().isEmpty()) {
+                tree.deleteNode(salary);
             }
-            return "Failed to remove: No such employee with ID " + id + " or no records in salary grade " + salary;
+            return "Successfully removed: Employee with ID " + id + " in salary grade " + salary;
         }
-        // Named grade must contain the department; matching people in every grade are removed.
+        // Department removal is restricted to the salary specified in this command.
         if (command.equals("rDept")) {
             String department = parts[1];
-            if (!departmentPresent(node, department)) {
+            if (!stripDepartment(node, department)) {
                 return "Failed to remove: No employees from " + department + " in salary grade " + salary;
             }
-            ArrayList<Integer> keys = new ArrayList<Integer>();
-            collectKeys(tree.getRoot(), keys);
-            for (int key : keys) {
-                Node current = tree.findNode(key);
-                if (current == null || !stripDepartment(current, department)) {
-                    continue;
-                }
-                if (current.getRecords().isEmpty()) {
-                    tree.deleteNode(key);
-                }
+            if (node.getRecords().isEmpty()) {
+                tree.deleteNode(salary);
             }
             return "Successfully removed: Employees from " + department + " in salary grade " + salary;
         }
